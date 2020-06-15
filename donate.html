@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Fake Zoo</title>
+  <meta name="description" content="Hier stände was fürs SEO.">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Mein CSS -->
+  <link rel="stylesheet" type="text/css" href="C:\Users\julia\OneDrive\Dokumente\JulisZooCodeProject\styles\custom.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+</head>
+
+<body>
+
+  <!-- HEADER HEADER HEADER HEADER -->
+  <!-- NAVBAR -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+    <a class="navbar-brand" href="./index.html"> <i class="fas fa-paw"></i> Juli's Zoo Code Project</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- alles in folgendem div wird collapsed -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <!-- Animals -->
+        <li class="nav-item">
+          <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals</a>
+        </li>
+
+        <!-- map -->
+        <li class="nav-item">
+          <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map</a>
+        </li>
+
+        <!-- Donate -->
+        <li class="nav-item">
+          <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us</a></li>
+      </ul>
+
+      <a class="btn btn btn-outline-light my-2 my-sm-0" href="./tickets.html" role="button">Buy tickets!</a>
+    </div>
+  </nav>
+
+
+  <!--IMAGE-->
+
+  <div class="headerImage">
+
+    <img src="./images/zebra.jpg" class="img-fluid bigimage">
+    <h1 class="display-4 headerH w-100"><i class="fas fa-ticket-heart"></i> Adoption and Donation</h1>
+  </div>
+
+
+  <!--BREADCRUMBS-->
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Our Animals</li>
+  </ol>
+
+  <!-- HEADER END HEADER END HEADER END HEADER END -->
+
+  <!--Container gibt behelfmäßig abstand-->
+  <div class="container">
+
+
+
+
+
+    <div class="jumbotron boxshadow">
+      <h1 class="display-4">Sponsor an animal's food for one day!</h1>
+      <hr>
+      <div class="row">
+
+
+        <!--1 Animal hier -->
+        <div class=" col-lg-4 col-md-6 col-sm-6 pb-3 animal"  id="animal1">
+          <div class="card">
+            <img src=".\images/placeholderanimal.png" class="card-img-top">
+            <div class="card-body bgDarkG">
+              <h5 class="card-title text-white mb-0 idName"></h5>
+              <p class="card-text text-white"> <span class="idSex"></span> <span class="idSpecies"></span></p>
+
+              <span class="badge badge-pill badge-danger float-r idConservation"></span>
+
+            </div>
+
+            <div class="card-body">
+              <p class="card-text" id="idInfo"></p>
+
+              <button type="button" onclick="" class="donationBtn btn btn-outline-primary float-l" data-toggle="modal"
+                data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span id="idCost"></span>€ and feed me
+                for a day!</button>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Animal-->
+
+        <!--1 Animal hier -->
+        <div class=" col-lg-4 col-md-6 col-sm-6 pb-3 animal"  id="animal2">
+          <div class="card">
+            <img src=".\images/placeholderanimal.png" class="card-img-top">
+            <div class="card-body bgDarkG">
+              <h5 class="card-title text-white mb-0 idName"></h5>
+              <p class="card-text text-white"> <span class="idSex"></span> <span class="idSpecies"></span></p>
+
+              <span class="badge badge-pill badge-danger float-r idConservation"></span>
+
+            </div>
+
+            <div class="card-body">
+              <p class="card-text" id="idInfo"></p>
+
+              <button type="button" onclick="" class="donationBtn btn btn-outline-primary float-l" data-toggle="modal"
+                data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span id="idCost"></span>€ and feed me
+                for a day!</button>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Animal-->
+
+        <!--1 Animal hier -->
+        <div class="col-lg-4 col-md-6 col-sm-6 pb-3 animal" id="animal3">
+          <div class="card">
+            <img src=".\images/placeholderanimal.png" class="card-img-top">
+            <div class="card-body bgDarkG">
+              <h5 class="card-title text-white mb-0 idName"></h5>
+              <p class="card-text text-white"> <span class="idSex"></span> <span class="idSpecies"></span></p>
+
+              <span class="badge badge-pill badge-danger float-r idConservation"></span>
+
+            </div>
+
+            <div class="card-body">
+              <p class="card-text" id="idInfo"></p>
+
+              <button type="button" onclick="" class="donationBtn btn btn-outline-primary float-l" data-toggle="modal"
+                data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span id="idCost"></span>€ and feed me
+                for a day!</button>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Animal-->
+
+
+
+      </div>
+
+    </div>
+
+    <!--JUMBOTRON-->
+
+    <div class="jumbotron boxshadow">
+      <h2 class="display-4">Or donate to the park in general!</h1>
+
+        <div class="row">
+          <div class="col">
+            <div class="alert alert-danger" role="alert" id="x">
+              <p>Our bank account is currently <mark id="idAccount"></mark>€</p>
+              <p>With these funds we can feed <mark id="idFed"></mark> Animals today. This means <mark
+                  id="idSobstory"></mark>
+                % of our animals can eat today.</p>
+            </div>
+          </div>
+
+          <div class="col  p-1">
+            <div class="card">
+              <div class="card-body bgDarkG">
+
+                <h4 class="text-center text-white">Pay what you want</h4>
+                <!-- if this was an actual form that would send something to a server, there'd be a form action here -->
+                <form action="/" id="inputForm">
+                  <div class="input-group mb-1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">€</span>
+                    </div>
+                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+
+                  <!-- if this were an actual form the type would be submit -->
+                  <button class="btn btn-primary donationBtn btn-block mb-3" onclick="pwyw()" type="button"
+                    data-toggle="modal" data-target="#thanksModal">
+                    <i class="fa fa-heart"></i> Donate </button>
+                </form>
+                <h4 class="text-center text-white">Or pay a specific amount</h4>
+
+                <div class="btn-group w-100" role="group">
+                  <button class="btn btn-primary donationBtn" type="button" onclick="addtoCounter(1)"
+                    data-toggle="modal" data-target="#thanksModal"> <i class="fa fa-heart"></i> Donate 1€</button>
+                  <button class="btn btn-primary donationBtn" type="button" onclick="addtoCounter(10)"
+                    data-toggle="modal" data-target="#thanksModal"> <i class="fa fa-heart"></i> Donate 10€</button>
+                  <button class="btn btn-primary donationBtn" type="button" onclick="addtoCounter(100)"
+                    data-toggle="modal" data-target="#thanksModal"> <i class="fa fa-heart"></i> Donate 100€</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thank you Modal -->
+        <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="thanksModalLabel">Thank you!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Thank you for your contribution!
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+    <!--This div ends the all compassing container-->
+  </div>
+
+
+  <!-- Load scripts and functions -->
+  <script src="./scripts/donation.js"></script>
+
+  <!-- <script>basics();</script> -->
+  <script>howmuchistheFish();</script>
+
+
+  <!-- Letztes Element im Body: JS und co., damit Bootstrap funktioniert -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

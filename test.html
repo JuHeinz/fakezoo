@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/custom.css">
+  <title>Document</title>
+
+<body>
+  <div class="a" id=1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente velit numquam suscipit culpa incidunt animi in
+    voluptas aperiam sunt facere ratione porro, dolores delectus quibusdam eveniet, quod aut itaque veritatis?
+  </div>
+
+  <div class="a" id=2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente velit numquam suscipit culpa incidunt animi in
+    voluptas aperiam sunt facere ratione porro, dolores delectus quibusdam eveniet, quod aut itaque veritatis?
+  </div>
+
+  <div class="a" id=3>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente velit numquam suscipit culpa incidunt animi in
+    voluptas aperiam sunt facere ratione porro, dolores delectus quibusdam eveniet, quod aut itaque veritatis?
+  </div>
+
+  <script>
+  
+    // nodelist zu divs holen
+    var div = document.querySelectorAll(".a");
+  
+    // für jedes element von div function numGen ausführen
+    for (var i = 0; i < div.length; i++) {
+      console.log(i);
+      numGen();
+    }
+
+
+  //random nummer generieren und zu jeden element von div einfügen
+  function numGen () {
+    var num = Math.random();
+    console.log(num);
+    div[i].innerHTML = num;
+
+  }
+
+  // in jedem div eine andere random nummer angeben
+  </script>
+</body>
+
+</html>

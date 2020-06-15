@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animals | Fake Zoo</title>
+  <meta name="description" content="Hier stände was fürs SEO.">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Mein CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/custom.css">
+
+
+
+
+</head>
+
+
+<body>
+
+  <!-- HEADER HEADER HEADER HEADER -->
+  <!--NAVBAR-->
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+    <a class="navbar-brand" href="./index.html"> <i class="fas fa-paw"></i> Juli's Zoo Code Project</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- alles in folgendem div wird collapsed -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <!-- Animals -->
+        <li class="nav-item">
+          <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals</a>
+        </li>
+
+        <!-- map -->
+        <li class="nav-item">
+          <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map</a>
+        </li>
+
+        <!-- Donate -->
+        <li class="nav-item">
+          <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us</a></li>
+      </ul>
+
+      <a class="btn btn btn-outline-light my-2 my-sm-0" href="./tickets.html" role="button">Buy tickets!</a>
+    </div>
+  </nav>
+
+
+  <!--IMAGE-->
+
+
+  <div class="headerImage">
+    <img src="./images/redpanda.jpg" class="img-fluid bigimage">
+    <h1 class="display-4 headerH w-100"><i class="fas fa-frog"></i> Our Animals</h1>
+  </div>
+
+
+  <!--BREADCRUMBS-->
+
+  <div class="simpleBox pb-1">
+    <div class="container">
+      <p class="text-muted"><a class="text-muted" href="/index.html">Home </a>/ Our Animals</p>
+    </div>
+  </div>
+
+  <!-- HEADER END HEADER END HEADER END HEADER END -->
+
+
+
+  <!--SIMPLEBOX-->
+  <div class="container ">
+
+
+    <div class="jumbotron boxshadow">
+
+      <p class="lead">These aren't really the animals in the zoo, they are randomly generated.</p>
+      <p> Each time you load this site, a javascript funtion creates a new animal. The function picks a random value
+        from arrays which contain all the possible species and names. Can you detect the naming pattern? Hint: It's
+        copied from a wikipedia list, but which one? </p>
+
+
+    </div>
+
+
+
+    <div class="row ">
+
+      <!--1 Animal hier -->
+      <div class=" col-lg-4 col-md-6 col-sm-6 pb-3">
+        <div class="card boxshadow generation">
+
+          <!-- IMAGE -->
+          <div class="imgContainer">
+            <img src="./images/placeholderanimal.png" class="card-img-top">
+            <div class="overlayHere">
+              <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
+            </div>
+          </div>
+          <!-- CARDBODY -->
+          <div class="card-body bgDarkG">
+            <div class="row no-gutters">
+              <div class="col">
+                <h5 class="card-title text-white mb-0" id="idName"></h5>
+              </div>
+              <div class="col">
+                <span class="badge badge-pill badge-danger" id="idConservation"></span>
+                <span class="badge badge-pill badge-secondary text-center" id="idWarning"></span>
+              </div>
+
+            </div>
+            <p class="card-text text-white">
+              <span id="idSex">female</span>
+              <span id="idSpecies"></span>
+            </p>
+          </div>
+
+          <!-- FERT -->
+          <div class="row align-items-center progressRow">
+            <div class="col-4 text-muted">
+              Fertility:
+            </div>
+            <div class="col-8">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" ; id="fertbar">
+                  <span class="geneticStat" id="idFert"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- SIZE -->
+
+          <div class="row align-items-center progressRow">
+            <div class="col-4 text-muted">
+              Size:
+            </div>
+            <div class="col-8">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" ; id="sizebar">
+                  <span class="geneticStat" id="idSize"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LIFE -->
+
+          <div class="row align-items-center progressRow">
+            <div class="col-4 text-muted">
+              Longevity:
+            </div>
+            <div class="col-8">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" ; id="lifebar">
+                  <span class="geneticStat" id="idLife"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- IMMU -->
+          <div class="row align-items-center progressRow">
+            <div class="col-4 text-muted">
+              Immunity:
+            </div>
+            <div class="col-8">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" ; id="immubar">
+                  <span class="geneticStat" id="idImmu"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SCORE
+                            <li class="list-group-item">Score: <span id="idScore"></span></li> -->
+
+
+          <div class="card-body">
+            <p class="card-text" id="idInfo"></p>
+
+            <!-- ADOPTION BUTTON -->
+            <button type="button" id="adoptionButton" data-toggle="modal" data-target="#adoptionModal"
+              class="btn btn-outline-primary float-l">
+              <i class="fas fa-heart"></i> Adopt me!
+            </button>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Animal-->
+
+
+    </div>
+
+    <!--combinationen -->
+
+    <div class=" jumbotron font-weight-light font-italic text-muted boxshadow">
+      <p>
+        Species in game (April 2020): <span class="bg-light" id="animLenght"></span>,
+        Names in generator: <span class="bg-light" id="namedLenght"></span>,
+        In-game sexes: <span class="bg-light" id="sexLenght"></span>,
+        Possible Combinations: <span class="bg-light" id="combinations"></span> </p>
+
+      <span id="id97"></span>
+
+    </div>
+
+    <div class="jumbotron boxshadow">
+    <h1 class="text-center">Table List</h1>
+    <button class="btn btn-secondary btn-block mb-3 " type="button" data-toggle="collapse"
+      data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">See whole
+      list</button>
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        <!--Table-->
+        <table id="tablePreview" class="table mb-6">
+          <!--Table head-->
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Species</th>
+              <th>Sex</th>
+            </tr>
+          </thead>
+          <!--Table head-->
+          <!--Table body-->
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>A</td>
+              <td>B</td>
+              <td>C</td>
+            </tr>
+            
+          </tbody>
+          <!--Table body-->
+        </table>
+        <!--Table-->
+      </div>
+    </div>
+
+      <!-- Load my Javascript-File must be placed AFTER all used ids! -->
+      <script src="./scripts/animals.js"></script>
+      <script>define();</script>
+      <script>write();</script>
+      <script>write2();</script>
+
+
+     
+
+      <!-- MODAL -->
+      <div id="adoptionModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Adopt the animal?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="adoptionModalText" class="modal-body">
+              <p>Do you want to adopt this animal?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="adoptionconfirm" class="btn btn-primary" onclick="adoptionEffect();">Yes, I want
+                to!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+   
+
+    <!-- Letztes Element im Body: JS und co., damit Bootstrap funktioniert -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>

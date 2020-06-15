@@ -1,0 +1,144 @@
+
+
+
+/*Numbers: negativ, mit Komma
+4
+2.3
+-20
+
+//Strings
+"mit Doppeltzeichen"
+'mit Einfachenzeichen'
+
+//Boolean nur y/n
+true
+false
+
+//null and undefined
+null = "Hier ist nichts"
+undefinded = "Hier wurde (noch) nichts deklariert" var exisitiert aber nie einen Wert gegeben
+            
+
+//Modulus
+5 % 2 = 1
+
+
+//Methods
+z.b. clear()
+z.B. randomMath()
+z.B. alert ()
+
+
+//AND
+&&
+
+var age = 10
+var size = 10
+age >= 10 && size >=10
+
+---> True
+
+Beide Teile müssen wahr sein, damit das ganze statement wahr ist.
+
+
+//OR
+||
+
+var age = 10
+var size = 10
+age === 1500 || size ===10
+
+Nur Ein Teil muss wahr sein, damit das ganze statement wahr ist.
+
+
+//Uno Reverse card
+!(Lüge) = Wahrheit
+
+
+//Conditions
+
+if (name = Juli) {super cool} -> Wenn das schon zutrifft, dann wird der rest erst gar nicht angeschaut
+if else (name = Baby) {auch cool}  ->>> wenn das erste nicht zutrifft, fällt es auf if else zurück
+else {nicht cool, sorry} -> Das ist die Reste-Kategorie
+
+
+// index of
+
+var word = "hello world"
+word.indexOf("o")   ->>> 4
+
+Zeigt an an welcher Stelle das o ist
+
+
+// for loop
+ist wie ein while loop, nur besser
+die var die in dem ersten Teil definiert wird ist nur für diesen Loop gültig, deshalb nur ein buchstabe
+hinter den ersten beiden teilen der ersten klammer muss ein ;
+
+        for (ausgangssituation variable definieren und wert geben; wir machen es so lange wie diese kondition stattfindet; das machen wir; )
+        {
+        code. der damm ausgeführt wird
+        }
+
+
+        for (var i =5; i < 100; i+=8)
+            {console.log(i);}
+
+es ist wichtig dass hier +=8 steht und nicht nur +8. += verändert nämlich die variable. Also x+=8 ist das gleiche wie x = x+8
+for loops können auch if statements enthalten
+        for (var b = 5; b <= 50; b++)
+        	{
+        if(b % 5 === 0 && b % 3 === 0)
+            {console.log(b);}
+            }
+            
+// Functions
+
+Definieren:
+funcion namederfunction (argument)
+
+Funktion aufrufen:
+namederfuction(argument);
+
+Das Argument ist ein Platzhalter, jedes mal können wir eine andere zahl eingeben:
+
+
+function alter (nummer){
+    
+    var x 
+    alterin5jahren = nummer + 5
+    console.log(
+    "In 5 Jahren bist du " + alterin5jahren +" Jahre alt!");
+}
+
+    das argument muss man nicht im vorraus definieren.
+
+alter(4);
+
+/// Return
+
+speichert den Output meiner function
+nach dem 1. return endet die function, alles unter dem wort wird nicht mehr ausgeführt
+
+
+
+///Scope
+variabeln die man in einer funktion definiert, können nur in dieser verwendet werden
+aber wenn die funktion in einer variable verändert wird, dann wir sie auch global verändert. anderst ist es wenn man die variable innerhalb der funktion neu definiert.
+ eine function werkelt nicht da wo sie zum ersten mal definiert wird, sondern dort wo sie aufgerufen wird
+ 
+ 
+// Arrays
+     colors [0] -> giibt erstes Element im Array aus
+
+mit for loop combinieren, damit alle teile des arrays ausgegeben werden:
+
+     for (i=0, i < colors.lenght, i++)
+     {aFunction(Colors[i])}
+            
+oder noch besser: forEach
+    
+    someArray.forEach(someFunction)
+   
+    
+

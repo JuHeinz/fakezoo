@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets | Fake Zoo</title>
+    <meta name="description" content="Hier stände was fürs SEO.">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Mein CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="C:\Users\julia\OneDrive\Dokumente\JulisZooCodeProject\styles/custom.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <!-- HEADER HEADER HEADER HEADER -->
+    <!-- NAVBAR -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <a class="navbar-brand" href="./index.html"> <i class="fas fa-paw"></i> Juli's Zoo Code Project</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- alles in folgendem div wird collapsed -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <!-- Animals -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals</a>
+                </li>
+
+                <!-- map -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map</a>
+                </li>
+
+                <!-- Donate -->
+                <li class="nav-item">
+                    <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us</a></li>
+            </ul>
+
+            <a class="btn btn btn-outline-light my-2 my-sm-0" href="./tickets.html" role="button">Buy tickets!</a>
+        </div>
+    </nav>
+
+    <!--IMAGE-->
+
+    <div class="headerImage">
+
+        <img src="images/elephant.jpg" class="img-fluid bigimage">
+        <h1 class="display-4 headerH w-100"><i class="fas fa-ticket-alt"></i> Get Tickets</h1>
+    </div>
+
+
+    <!--BREADCRUMBS-->
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Our Animals</li>
+    </ol>
+
+    <!-- HEADER END HEADER END HEADER END HEADER END -->
+
+    <!--Container gibt behelfmäßig abstand-->
+    <div class="container">
+
+
+
+        <!--JUMBOTRON-->
+
+        <div class="jumbotron boxshadow">
+            <h1 class="display-3">The best day of your year!</h1>
+
+            <p class="lead">Nam quamquam hic occaecat, de summis an elit aut tempor o nostrud si hic est
+                efflorescere.</p> 
+                <table class="table table-striped table-hover table-sm">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Mon - Fri</th>
+                        <td>closed</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">Sat - Sun:</th>
+                        <td>closed</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">Holidays</th>
+                        <td>closed</td>
+                        
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+
+
+
+
+        <!--GRID-->
+        
+
+        <!-- eachof the divs takes up 6 units when the screen is large, medium and small, it will only take up 12 units when the screen is xs -->
+
+
+                <div class="card-deck mb-3">
+
+                <div class="card boxshadow ">
+
+                    <div class="card-header">Entrance Fees</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Park entry</h5>
+
+                        <p class="card-subtitle text-muted mb-2">Buy your tickets online, there is a 2€ on-site fee.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h6>Adults: 20€</h6>
+                                <p class="text-muted">For anyone over the age of 18.</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h6>Children: 15€</h6>
+                                <p class="text-muted">For anyone under the age of 18.</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h6>Reduced: 10€</h6>
+                                <p class="text-muted">For (university) students, people with disability and retired
+                                    people.</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="card boxshadow">
+                    <div class="card-header"> Order tickets </div>
+                    <div class="card-body">
+                        <!-- Tickets-->
+                        <form id="ticketForm" action="/action_page.php">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Adult Tickets</span>
+                                </div>
+                                <input type="number" name="adult" class="form-control" value="0">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Child Tickets</span>
+                                </div>
+                                <input type="number" name="child" class="form-control" value="0">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Discounted Tickets</span>
+                                </div>
+                                <input type="number" name="special" class="form-control" value="0">
+                            </div>
+                        </form>
+
+
+                        <button type="button" onclick="order()" class="btn btn-primary float-right" data-toggle="modal"
+                            data-target="#orderModal">Order it</button>
+                    </div>
+                </div>
+
+            <!-- </div> -->
+        </div>
+
+
+
+
+
+        <!-- LEGAL -->
+        <div class="card boxshadow">
+            <div class="card-body">
+                <h5 class="card-title">Terms and Conditons</h5>
+            </div>
+            <div class="card-body">
+                <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veritatis fuga a perferendis
+                    aperiam aspernatur quae consequuntur saepe repellat. Nam veritatis pariatur voluptatem autem quis
+                    quisquam iste itaque ipsam accusamus!</small>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+    <!--This div ends the all compassing container-->
+    </div>
+
+    <!-- MODAL -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Confirm order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <p id="sumA"></p>
+                        </li>
+                        <li class="list-group-item">
+                            <p id="sumB"></p>
+                        </li>
+                        <li class="list-group-item">
+                            <p id="sumC"></p>
+                        </li>
+                    </ul>
+                    <p class="orderMessage text-center font-weight-bold mt-4"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Load my Javascript-File must be placed AFTER all used ids! -->
+    <script src="./scripts/tickets.js"></script>
+
+    </script>
+
+    <!-- Letztes Element im Body: JS und co., damit Bootstrap funktioniert -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

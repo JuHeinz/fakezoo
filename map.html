@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+
+        <!-- Standart HTML -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Map | Fake Zoo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Hier stände was fürs SEO.">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Mein CSS -->
+        <link rel="stylesheet" type="text/css" href="./styles/custom.css">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- script for navbar opacity change -->
+        <script src="./scripts/general.js"></script>
+
+
+
+
+
+    </head>
+
+
+
+<body>
+
+
+    <!-- Brandbar -->
+<nav class="navbar navbar-light bgDarkG justify-content-center">
+    <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./index.html"> Fake <img src="./images/skunk.svg" width="50" height="50" alt="" loading="lazy" alt="">  Zoo</a>
+  
+    </a>
+  </nav>
+  
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top justify-content-center" id="nav2">
+  
+  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- alles in folgendem div wird collapsed -->
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+  
+          <!-- Animals -->
+          <li class="nav-item">
+            <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals</a>
+          </li>
+  
+          <!-- map -->
+          <li class="nav-item">
+            <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map</a>
+          </li>
+  
+          <!-- Donate -->
+          <li class="nav-item">
+            <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us</a></li>
+  
+        <!-- Ticket -->
+        <li class="nav-item">
+          <a class=" nav-link btn btn btn-outline-light my-2 my-sm-0 " href="./tickets.html" role="button">Buy tickets!</a>
+        </ul>
+  
+      </div>
+    </nav>
+
+    <!--IMAGE-->
+    <div class="headerImage">
+        <img src="./images/zoo.jpg" class="img-fluid bigimage">
+        <h1 class="display-4 headerH w-100"><i class="fas fa-map-signs"></i> Zoo Map</h1>
+    </div>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Zoo Map</li>
+    </ol>
+
+
+
+    <div class="container">
+
+        <h2>There will be a map here</h2>
+
+        <div class="container">
+            <div class="row row-cols-3">
+                <div id="lo" class="mapcell col-sm-4"> <h2>LO</h2>
+                </div>
+                <div id="mo" class="mapcell col-sm-4"> <img src="./images/placeholderanimal.png" class="img-fluid">
+                </div>
+                <div id="ro" class="mapcell col-sm-4"> <img src="./images/placeholderanimal.png" class="img-fluid">
+                </div>
+                <div id="lm" class="mapcell col-sm-4"> <img src="./images/placeholderanimal.png" class="img-fluid">
+                </div>
+                <div id="mm" class="mapcell col-sm-4"> <img src="./images/placeholderanimal.png" class="img-fluid">
+                </div>
+                <div id="rm" class="mapcell col-sm-4"> <img src="./images/placeholderanimal.png" class="img-fluid">
+                </div>
+                <div id="lu" class="mapcell col-sm-4"> <img src="./images/placeholderanimal.png" class="img-fluid">
+                </div>
+                <div id="mu" class="mapcell col-sm-4"> <img src="./images/placeholderanimal.png" class="img-fluid">
+                </div>
+                <div id="ru" class="mapcell col-sm-4"> <img src="./images/placeholderanimal.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/map.js"></script>
+
+    <!-- Letztes Element im Body: JS und co., damit Bootstrap funktioniert -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

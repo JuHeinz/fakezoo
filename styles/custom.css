@@ -15,8 +15,7 @@ mittel: #F1F1F1
 dunkel:#cecccc */
 
 .test {
-    background-color: red;
-    border: red;
+    border: 1px dashed red;
 }
 
 .boxshadow {
@@ -435,16 +434,31 @@ a .card-img-overlay{
 
 /* FOOTER */
 
-footer {
+.footer{
     background-color:#0F7B57;
     padding: 2rem;
     text-align: center;
 }
 
-footer a {
+.social-icon  {
     color: white;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-decoration: none;
+}
 
+
+.footer-link-box {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+
+}
+
+.footer-link{
+    color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-decoration: none;
 }
 
 .footerImg {

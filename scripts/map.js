@@ -17,7 +17,7 @@ var lo = document.querySelector("#lo");
 lo.addEventListener("mouseover", test)
 
 function test() {
-    console.log("I clicked on the upper left.");
+    
     lo.classList.add("test")
     }
 

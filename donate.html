@@ -48,16 +48,16 @@
         <!-- Animals -->
         <li class="nav-item">
           <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals</a>
-        </li>
 
-        <!-- map -->
+
+          <!-- map -->
         <li class="nav-item">
           <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map</a>
-        </li>
 
-        <!-- Donate -->
+
+          <!-- Donate -->
         <li class="nav-item">
-          <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us</a></li>
+          <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us</a>
       </ul>
 
       <a class="btn btn btn-outline-light my-2 my-sm-0" href="./tickets.html" role="button">Buy tickets!</a>
@@ -77,8 +77,8 @@
   <!--BREADCRUMBS-->
 
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Our Animals</li>
+    <li class="breadcrumb-item"><a href="/index.html">Home</a>
+    <li class="breadcrumb-item active" aria-current="page">Our Animals
   </ol>
 
   <!-- HEADER END HEADER END HEADER END HEADER END -->
@@ -92,27 +92,27 @@
 
     <div class="jumbotron boxshadow">
       <h1 class="display-4">Sponsor an animal's food for one day!</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolore autem error atque saepe,
+        animi ullam praesentium. Beatae atque dicta repellendus eos. Dicta expedita dignissimos dolores atque, veritatis
+        pariatur tempora.</p>
       <hr>
+
       <div class="row">
 
 
         <!--1 Animal hier -->
-        <div class=" col-lg-4 col-md-6 col-sm-6 pb-3 animal"  id="animal1">
-          <div class="card">
+        <div class=" col-lg-4 col-md-6 col-sm-6 pb-3 animal">
+          <div class="card boxshadow">
             <img src=".\images/placeholderanimal.png" class="card-img-top">
             <div class="card-body bgDarkG">
               <h5 class="card-title text-white mb-0 idName"></h5>
-              <p class="card-text text-white"> <span class="idSex"></span> <span class="idSpecies"></span></p>
-
-              <span class="badge badge-pill badge-danger float-r idConservation"></span>
+              <p class="card-text text-white mb-0"> <span class="idSex"></span> <span class="idSpecies"></span></p>
 
             </div>
-
             <div class="card-body">
-              <p class="card-text" id="idInfo"></p>
-
-              <button type="button" onclick="" class="donationBtn btn btn-outline-primary float-l" data-toggle="modal"
-                data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span id="idCost"></span>€ and feed me
+              <button type="button" onclick="addtoCounter(cost)" class="donationBtn btn btn-outline-primary float-l"
+                data-toggle="modal" data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span
+                  class="idCost"></span>€ and feed me
                 for a day!</button>
 
             </div>
@@ -121,22 +121,18 @@
         <!-- End Animal-->
 
         <!--1 Animal hier -->
-        <div class=" col-lg-4 col-md-6 col-sm-6 pb-3 animal"  id="animal2">
-          <div class="card">
+        <div class=" col-lg-4 col-md-6 col-sm-6 pb-3 animal">
+          <div class="card boxshadow">
             <img src=".\images/placeholderanimal.png" class="card-img-top">
             <div class="card-body bgDarkG">
               <h5 class="card-title text-white mb-0 idName"></h5>
-              <p class="card-text text-white"> <span class="idSex"></span> <span class="idSpecies"></span></p>
-
-              <span class="badge badge-pill badge-danger float-r idConservation"></span>
+              <p class="card-text text-white mb-0"> <span class="idSex"></span> <span class="idSpecies"></span></p>
 
             </div>
-
             <div class="card-body">
-              <p class="card-text" id="idInfo"></p>
-
               <button type="button" onclick="" class="donationBtn btn btn-outline-primary float-l" data-toggle="modal"
-                data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span id="idCost"></span>€ and feed me
+                data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span class="idCost"></span>€ and feed
+                me
                 for a day!</button>
 
             </div>
@@ -145,56 +141,63 @@
         <!-- End Animal-->
 
         <!--1 Animal hier -->
-        <div class="col-lg-4 col-md-6 col-sm-6 pb-3 animal" id="animal3">
-          <div class="card">
+        <div class=" col-lg-4 col-md-6 col-sm-6 pb-3 animal">
+          <div class="card boxshadow">
             <img src=".\images/placeholderanimal.png" class="card-img-top">
             <div class="card-body bgDarkG">
               <h5 class="card-title text-white mb-0 idName"></h5>
-              <p class="card-text text-white"> <span class="idSex"></span> <span class="idSpecies"></span></p>
-
-              <span class="badge badge-pill badge-danger float-r idConservation"></span>
+              <p class="card-text text-white mb-0"> <span class="idSex"></span> <span class="idSpecies"></span></p>
 
             </div>
-
             <div class="card-body">
-              <p class="card-text" id="idInfo"></p>
-
               <button type="button" onclick="" class="donationBtn btn btn-outline-primary float-l" data-toggle="modal"
-                data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span id="idCost"></span>€ and feed me
+                data-target="#thanksModal"> <i class="fas fa-heart"></i> Donate <span class="idCost"></span>€ and feed
+                me
                 for a day!</button>
 
             </div>
+
           </div>
+
         </div>
+
         <!-- End Animal-->
 
 
 
       </div>
+      <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error maiores, repudiandae in
+        beatae dolorem vel. Expedita adipisci consequuntur dolorem itaque eaque aut similique et quaerat? Et, suscipit
+        sapiente! Aliquam, accusamus.</p>
+
 
     </div>
 
     <!--JUMBOTRON-->
 
     <div class="jumbotron boxshadow">
-      <h2 class="display-4">Or donate to the park in general!</h1>
+      <h2 class="display-4">Or donate to the park in general!</h2>
+        <p class="lead">Omnis dolore autem error atque saepe, animi ullam praesentium. Beatae atque dicta repellendus
+          eos. Dicta expedita dignissimos dolores atque, veritatis pariatur tempora.</p>
+
+        <hr>
+
+        <div class="card" id="x">
+          <div class="card-body">
+            <h5 class="card-title">Our bank account is currently <mark id="idAccount"></mark>€</h5>
+            <h6 class="card-subtitle mb-2 text-muted">You can help!</h6>
+            <p></p>
+            <p>With these funds we can feed <mark id="idFed"></mark> Animals today. This means <mark
+                id="idSobstory"></mark>
+              % of our animals can eat today.</p>
+          </div>
+        </div>
 
         <div class="row">
-          <div class="col">
-            <div class="alert alert-danger" role="alert" id="x">
-              <p>Our bank account is currently <mark id="idAccount"></mark>€</p>
-              <p>With these funds we can feed <mark id="idFed"></mark> Animals today. This means <mark
-                  id="idSobstory"></mark>
-                % of our animals can eat today.</p>
-            </div>
-          </div>
-
-          <div class="col  p-1">
+          <div class="col-lg-12 col-sm-6">
             <div class="card">
-              <div class="card-body bgDarkG">
-
-                <h4 class="text-center text-white">Pay what you want</h4>
-                <!-- if this was an actual form that would send something to a server, there'd be a form action here -->
+              <div class="card-body">
+                <h5 class="card-title">Pay what you want</h5>
                 <form action="/" id="inputForm">
                   <div class="input-group mb-1">
                     <div class="input-group-prepend">
@@ -204,15 +207,20 @@
                     <div class="input-group-append">
                       <span class="input-group-text">.00</span>
                     </div>
-                  </div>
-
-                  <!-- if this were an actual form the type would be submit -->
-                  <button class="btn btn-primary donationBtn btn-block mb-3" onclick="pwyw()" type="button"
-                    data-toggle="modal" data-target="#thanksModal">
-                    <i class="fa fa-heart"></i> Donate </button>
+                    <button class="btn btn-primary donationBtn btn-block mt-1" onclick="pwyw()" type="button"
+                      data-toggle="modal" data-target="#thanksModal">
+                      <i class="fa fa-heart"></i> Donate
+                    </button>
                 </form>
-                <h4 class="text-center text-white">Or pay a specific amount</h4>
+              </div>
+            </div>
+          </div>
 
+
+          <div class="col-lg-12 col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Or pay a specific amount</h5>
                 <div class="btn-group w-100" role="group">
                   <button class="btn btn-primary donationBtn" type="button" onclick="addtoCounter(1)"
                     data-toggle="modal" data-target="#thanksModal"> <i class="fa fa-heart"></i> Donate 1€</button>
@@ -224,32 +232,99 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Thank you Modal -->
-        <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="thanksModalLabel">Thank you!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                Thank you for your contribution!
-              </div>
-            </div>
-          </div>
-        </div>
 
+
+
+        </div>
     </div>
-
-
-    <!--This div ends the all compassing container-->
   </div>
 
+  </div>
+
+  <!-- Thank you Modal -->
+  <div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="thanksModalLabel">Thank you!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Thank you for your contribution!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+  <!--This div ends the all compassing container-->
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer justify-content-center">
+
+    <!-- SOCIAL -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+
+          <a href="https://www.facebook.com/" class="social-icon">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.twitter.com/" class="social-icon">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/" class="social-icon">
+            <i class="fa fa-instagram"></i>
+
+            <a href="https://www.youtube.com/" class="social-icon">
+              <i class="fa fa-youtube-play"></i>
+            </a>
+            <a href="https://www.linkedin.com/" class="social-icon">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.snapchat.com/" class="social-icon">
+              <i class="fa fa-snapchat-ghost"></i></a>
+
+
+
+        </div>
+
+
+        <!-- FOOTER LINKS -->
+        <div class="col-12 footer-link-box">
+          <a href="https://wikipedia.org" class="footer-link">Careers</a>
+          <a href="https://wikipedia.org" class="footer-link">Contact Us</a>
+          <a href="https://wikipedia.org" class="footer-link">Media Room</a>
+          <a href="https://wikipedia.org" class="footer-link">Terms &amp; Conditions</a>
+          <a href="https://wikipedia.org" class="footer-link">Privacy Policy</a>
+          <a href="https://wikipedia.org" class="footer-link">Regulations</a>
+        </div>
+
+        <!-- LOGOS -->
+        <div class="col-12 ">
+
+          <img class="footerImg" src="./images/pet.svg" alt="logo1">
+          <img class="footerImg" src="./images/guarantee.svg" alt="logo1">
+
+          <img class="footerImg" src="./images/safe.svg" alt="logo1">
+
+        </div>
+
+        <div class="col-12 text-white mt-2">
+          © FakeZoo Inc.
+        </div>
+
+      </div>
+  </footer>
 
   <!-- Load scripts and functions -->
   <script src="./scripts/donation.js"></script>

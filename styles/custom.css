@@ -16,6 +16,9 @@ dunkel:#cecccc */
 
 .test {
     border: 1px dashed red;
+    color: red;
+    background-color: red;
+    text-decoration: red;
 }
 
 .boxshadow {

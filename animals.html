@@ -93,108 +93,111 @@
       <p> Each time you load this site, a javascript funtion creates a new animal. The function picks a random value
         from arrays which contain all the possible species and names. Can you detect the naming pattern? Hint: It's
         copied from a wikipedia list, but which one? </p>
+        <button class="btn btn-primary donationBtn btn-block mt-1" onclick="bars()" type="button">Show more</button>
 
 
     </div>
 
 
 
+
+
     <div class="row ">
-
-      <!--1 Animal hier -->
+      <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
       <div class=" col-lg-4 col-md-6 col-sm-6 pb-3">
         <div class="card boxshadow generation">
 
-          <!-- IMAGE -->
+          <!-- Image -->
           <div class="imgContainer">
             <img src="./images/placeholderanimal.png" class="card-img-top">
             <div class="overlayHere">
               <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
             </div>
           </div>
-          <!-- CARDBODY -->
+
           <div class="card-body bgDarkG">
             <div class="row no-gutters">
               <div class="col">
+
+                <!-- Name -->
                 <h5 class="card-title text-white mb-0 idName"></h5>
               </div>
+
+              <!-- Warning Pills -->
               <div class="col">
                 <span class="badge badge-pill badge-danger" class="idConservation"></span>
                 <span class="badge badge-pill badge-secondary text-center" class="idWarning"></span>
               </div>
-
             </div>
+
+            <!-- Sex & Species -->
             <p class="card-text text-white">
               <span class="idSex">female</span>
               <span class="idSpecies"></span>
             </p>
           </div>
 
-          <!-- FERT -->
+          <!-- Fert -->
           <div class="row align-items-center progressRow">
             <div class="col-4 text-muted">
               Fertility:
             </div>
             <div class="col-8">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" ; class="fertbar">
+                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
                   <span class="geneticStat idFert"></span>
                 </div>
               </div>
             </div>
           </div>
 
-
-          <!-- SIZE -->
-
+          <!-- Size -->
           <div class="row align-items-center progressRow">
             <div class="col-4 text-muted">
               Size:
             </div>
             <div class="col-8">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" ; class="sizebar">
+                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
                   <span class="geneticStat idSize"></span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- LIFE -->
-
+          <!-- Life -->
           <div class="row align-items-center progressRow">
             <div class="col-4 text-muted">
               Longevity:
             </div>
             <div class="col-8">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" ; class="lifebar">
+                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
                   <span class="geneticStat idLife"></span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- IMMU -->
+          <!-- Immu -->
           <div class="row align-items-center progressRow">
             <div class="col-4 text-muted">
               Immunity:
             </div>
             <div class="col-8">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" ; class="immubar">
+                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
                   <span class="geneticStat idImmu"></span>
                 </div>
               </div>
             </div>
           </div>
 
-
-
+          <!-- Info = Verdict & Flavor -->
           <div class="card-body">
             <p class="card-text" class="idInfo"></p>
 
-            <!-- ADOPTION BUTTON -->
+            <!-- Adoption Button -->
             <button type="button" id="adoptionButton" data-toggle="modal" data-target="#adoptionModal"
               class="btn btn-outline-primary float-l">
               <i class="fas fa-heart"></i> Adopt me!
@@ -203,206 +206,101 @@
           </div>
         </div>
       </div>
-      <!-- End Animal-->
-
-        <!--1 Animal hier -->
-        <div class=" col-lg-4 col-md-6 col-sm-6 pb-3">
-          <div class="card boxshadow generation">
-  
-            <!-- IMAGE -->
-            <div class="imgContainer">
-              <img src="./images/placeholderanimal.png" class="card-img-top">
-              <div class="overlayHere">
-                <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
-              </div>
-            </div>
-            <!-- CARDBODY -->
-            <div class="card-body bgDarkG">
-              <div class="row no-gutters">
-                <div class="col">
-                  <h5 class="card-title text-white mb-0 idName"></h5>
-                </div>
-                <div class="col">
-                  <span class="badge badge-pill badge-danger" class="idConservation"></span>
-                  <span class="badge badge-pill badge-secondary text-center" class="idWarning"></span>
-                </div>
-  
-              </div>
-              <p class="card-text text-white">
-                <span class="idSex">female</span>
-                <span class="idSpecies"></span>
-              </p>
-            </div>
-  
-            <!-- FERT -->
-            <div class="row align-items-center progressRow">
-              <div class="col-4 text-muted">
-                Fertility:
-              </div>
-              <div class="col-8">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" ; class="fertbar">
-                    <span class="geneticStat idFert"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-  
-            <!-- SIZE -->
-  
-            <div class="row align-items-center progressRow">
-              <div class="col-4 text-muted">
-                Size:
-              </div>
-              <div class="col-8">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" ; class="sizebar">
-                    <span class="geneticStat idSize"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <!-- LIFE -->
-  
-            <div class="row align-items-center progressRow">
-              <div class="col-4 text-muted">
-                Longevity:
-              </div>
-              <div class="col-8">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" ; class="lifebar">
-                    <span class="geneticStat idLife"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <!-- IMMU -->
-            <div class="row align-items-center progressRow">
-              <div class="col-4 text-muted">
-                Immunity:
-              </div>
-              <div class="col-8">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" ; class="immubar">
-                    <span class="geneticStat idImmu"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-  
-  
-            <div class="card-body">
-              <p class="card-text" class="idInfo"></p>
-  
-              <!-- ADOPTION BUTTON -->
-              <button type="button" id="adoptionButton" data-toggle="modal" data-target="#adoptionModal"
-                class="btn btn-outline-primary float-l">
-                <i class="fas fa-heart"></i> Adopt me!
-              </button>
-  
-            </div>
-          </div>
-        </div>
-        <!-- End Animal-->
-
-          <!--1 Animal hier -->
+      <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->      <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
       <div class=" col-lg-4 col-md-6 col-sm-6 pb-3">
         <div class="card boxshadow generation">
 
-          <!-- IMAGE -->
+          <!-- Image -->
           <div class="imgContainer">
             <img src="./images/placeholderanimal.png" class="card-img-top">
             <div class="overlayHere">
               <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
             </div>
           </div>
-          <!-- CARDBODY -->
+
           <div class="card-body bgDarkG">
             <div class="row no-gutters">
               <div class="col">
+
+                <!-- Name -->
                 <h5 class="card-title text-white mb-0 idName"></h5>
               </div>
+
+              <!-- Warning Pills -->
               <div class="col">
                 <span class="badge badge-pill badge-danger" class="idConservation"></span>
                 <span class="badge badge-pill badge-secondary text-center" class="idWarning"></span>
               </div>
-
             </div>
+
+            <!-- Sex & Species -->
             <p class="card-text text-white">
               <span class="idSex">female</span>
               <span class="idSpecies"></span>
             </p>
           </div>
 
-          <!-- FERT -->
+          <!-- Fert -->
           <div class="row align-items-center progressRow">
             <div class="col-4 text-muted">
               Fertility:
             </div>
             <div class="col-8">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" ; class="fertbar">
+                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
                   <span class="geneticStat idFert"></span>
                 </div>
               </div>
             </div>
           </div>
 
-
-          <!-- SIZE -->
-
+          <!-- Size -->
           <div class="row align-items-center progressRow">
             <div class="col-4 text-muted">
               Size:
             </div>
             <div class="col-8">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" ; class="sizebar">
+                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
                   <span class="geneticStat idSize"></span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- LIFE -->
-
+          <!-- Life -->
           <div class="row align-items-center progressRow">
             <div class="col-4 text-muted">
               Longevity:
             </div>
             <div class="col-8">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" ; class="lifebar">
+                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
                   <span class="geneticStat idLife"></span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- IMMU -->
+          <!-- Immu -->
           <div class="row align-items-center progressRow">
             <div class="col-4 text-muted">
               Immunity:
             </div>
             <div class="col-8">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" ; class="immubar">
+                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
                   <span class="geneticStat idImmu"></span>
                 </div>
               </div>
             </div>
           </div>
 
-
-
+          <!-- Info = Verdict & Flavor -->
           <div class="card-body">
             <p class="card-text" class="idInfo"></p>
 
-            <!-- ADOPTION BUTTON -->
+            <!-- Adoption Button -->
             <button type="button" id="adoptionButton" data-toggle="modal" data-target="#adoptionModal"
               class="btn btn-outline-primary float-l">
               <i class="fas fa-heart"></i> Adopt me!
@@ -411,7 +309,115 @@
           </div>
         </div>
       </div>
-      <!-- End Animal-->
+      <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->
+
+      <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
+      <div class=" col-lg-4 col-md-6 col-sm-6 pb-3">
+        <div class="card boxshadow generation">
+
+          <!-- Image -->
+          <div class="imgContainer">
+            <img src="./images/placeholderanimal.png" class="card-img-top">
+            <div class="overlayHere">
+              <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
+            </div>
+          </div>
+
+          <div class="card-body bgDarkG">
+            <div class="row no-gutters">
+              <div class="col">
+
+                <!-- Name -->
+                <h5 class="card-title text-white mb-0 idName"></h5>
+              </div>
+
+              <!-- Warning Pills -->
+              <div class="col">
+                <span class="badge badge-pill badge-danger" class="idConservation"></span>
+                <span class="badge badge-pill badge-secondary text-center" class="idWarning"></span>
+              </div>
+            </div>
+
+            <!-- Sex & Species -->
+            <p class="card-text text-white">
+              <span class="idSex">female</span>
+              <span class="idSpecies"></span>
+            </p>
+          </div>
+
+          <!-- Fert -->
+          <div class="row align-items-center progressRow">
+            <div class="col-4 text-muted">
+              Fertility:
+            </div>
+            <div class="col-8">
+              <div class="progress">
+                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
+                  <span class="geneticStat idFert"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Size -->
+          <div class="row align-items-center progressRow">
+            <div class="col-4 text-muted">
+              Size:
+            </div>
+            <div class="col-8">
+              <div class="progress">
+                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
+                  <span class="geneticStat idSize"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Life -->
+          <div class="row align-items-center progressRow">
+            <div class="col-4 text-muted">
+              Longevity:
+            </div>
+            <div class="col-8">
+              <div class="progress">
+                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
+                  <span class="geneticStat idLife"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Immu -->
+          <div class="row align-items-center progressRow">
+            <div class="col-4 text-muted">
+              Immunity:
+            </div>
+            <div class="col-8">
+              <div class="progress">
+                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
+                  <span class="geneticStat idImmu"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info = Verdict & Flavor -->
+          <div class="card-body">
+            <p class="card-text" class="idInfo"></p>
+
+            <!-- Adoption Button -->
+            <button type="button" id="adoptionButton" data-toggle="modal" data-target="#adoptionModal"
+              class="btn btn-outline-primary float-l">
+              <i class="fas fa-heart"></i> Adopt me!
+            </button>
+
+          </div>
+        </div>
+      </div>
+      <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->
+
+
+
 
     </div>
 
@@ -429,45 +435,45 @@
     </div>
 
     <div class="jumbotron boxshadow">
-    <h1 class="text-center">Table List</h1>
-    <button class="btn btn-secondary btn-block mb-3 " type="button" data-toggle="collapse"
-      data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">See whole
-      list</button>
-    <div class="collapse multi-collapse" id="multiCollapseExample2">
-      <div class="card card-body">
-        <!--Table-->
-        <table id="tablePreview" class="table mb-6">
-          <!--Table head-->
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Species</th>
-              <th>Sex</th>
-            </tr>
-          </thead>
-          <!--Table head-->
-          <!--Table body-->
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>A</td>
-              <td>B</td>
-              <td>C</td>
-            </tr>
-            
-          </tbody>
-          <!--Table body-->
-        </table>
-        <!--Table-->
+      <h1 class="text-center">Table List</h1>
+      <button class="btn btn-secondary btn-block mb-3 " type="button" data-toggle="collapse"
+        data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">See whole
+        list</button>
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          <!--Table-->
+          <table id="tablePreview" class="table mb-6">
+            <!--Table head-->
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Sex</th>
+              </tr>
+            </thead>
+            <!--Table head-->
+            <!--Table body-->
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+
+            </tbody>
+            <!--Table body-->
+          </table>
+          <!--Table-->
+        </div>
       </div>
-    </div>
 
       <!-- Load my Javascript-File must be placed AFTER all used ids! -->
       <script src="./scripts/animals.js"></script>
-    
 
-     
+
+
 
       <!-- MODAL -->
       <div id="adoptionModal" class="modal" tabindex="-1" role="dialog">
@@ -498,7 +504,7 @@
 
 
 
-   
+
 
     <!-- Letztes Element im Body: JS und co., damit Bootstrap funktioniert -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

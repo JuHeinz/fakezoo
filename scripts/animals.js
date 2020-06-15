@@ -20,12 +20,18 @@ var idScore = document.querySelectorAll(".idScore");
 
 
 
-for (var i =0; i < idSpecies.length; i++) {
-    basics();
+// Arrays, wo alles gespeichert wird
+var animList = []
+
+
+for (var i = 0; i < idSpecies.length; i++) {
+    var gAnimal = basics();
+    animList.push(gAnimal);
 }
 
- //Stats generieren und schreiben
-function basics(){
+//Stats generieren und schreiben
+// dieser code wird i-mal ausgeführt
+function basics() {
 
     let namedResult = named[Math.floor(Math.random() * named.length)];
     idName[i].innerHTML = namedResult;
@@ -35,7 +41,7 @@ function basics(){
 
     let sexResult = sex[Math.floor(Math.random() * sex.length)];
     idSex[i].innerHTML = sexResult;
-    
+
     var size = Math.floor(Math.random() * 101);
     idSize[i].innerHTML = size + "%";
 
@@ -49,28 +55,115 @@ function basics(){
     idLife[i].innerHTML = life + "%";
 
     var gAnimal = {
-    name: namedResult,
-    sex: sexResult,
-    species: animResult,
-    size: size,
-    immunity: immu,
-    fertility: fert,
-    longevity: life,
+        name: namedResult,
+        sex: sexResult,
+        species: animResult,
+        size: size,
+        immunity: immu,
+        fertility: fert,
+        longevity: life,
     };
 
-    console.log(gAnimal); 
-    }
+    console.log(gAnimal);
 
-    
+    return gAnimal;
+}
+
+
 // figure out how to use the results from the above function for another function and then do the rest of the code
 
+// auswählen mit list[0].size 
+
+/// get bars
+var sizebar = document.querySelectorAll(".sizebar");
+var lifebar = document.querySelectorAll(".lifebar");
+var immubar = document.querySelectorAll(".immubar");
+var fertbar = document.querySelectorAll(".fertbar");
 
 
-    
-    // // ID INFO
-    // let flavorResult = flavor[Math.floor(Math.random() * flavor.length)];
-    // idInfo[i] = namedResult + flavorResult + " " + verdict; 
-    // }
+setTimeout(() => {  }, 2000);
+function bars() {
+    console.log("Function bars is running!")
+
+    // Weite der Bar ändern je nach Stat
+    immubar[0].setAttribute("style", 'width: ' + animList[0].immunity + '%');
+    immubar[1].setAttribute("style", 'width: ' + animList[1].immunity + '%');
+    immubar[2].setAttribute("style", 'width: ' + animList[2].immunity + '%');
+
+    sizebar[0].setAttribute("style", 'width: ' + animList[0].size + '%');
+    sizebar[1].setAttribute("style", 'width: ' + animList[1].size + '%');
+    sizebar[2].setAttribute("style", 'width: ' + animList[2].size + '%');
+
+    lifebar[0].setAttribute("style", 'width: ' + animList[0].longevity + '%');
+    lifebar[1].setAttribute("style", 'width: ' + animList[1].longevity + '%');
+    lifebar[2].setAttribute("style", 'width: ' + animList[2].longevity + '%');
+
+    fertbar[0].setAttribute("style", 'width: ' + animList[0].fertility + '%');
+    fertbar[1].setAttribute("style", 'width: ' + animList[1].fertility + '%');
+    fertbar[2].setAttribute("style", 'width: ' + animList[2].fertility + '%');
+
+// Farbe der Bar ändern je nach Stat
+
+    for (var j = 0; j < lifebar.length; j++) {
+        //change sizebar color
+        if (animList[j].size < 25) {
+            sizebar[j].classList.add("statusRed");
+        }
+
+        else if (animList[j].size < 50) {
+            sizebar[j].classList.add("statusOrange");
+        }
+        else {
+            sizebar[j].classList.add("statusGreen");
+        }
+
+        //change lifebar color
+        if (animList[j].longevity < 25) {
+            lifebar[j].classList.add("statusRed");
+        }
+
+        else if (animList[j].longevity < 50) {
+            lifebar[j].classList.add("statusOrange");
+        }
+        else {
+            lifebar[j].classList.add("statusGreen");
+        }
+
+        //change immubar color
+        if (animList[j].immunity < 25) {
+            immubar[j].classList.add("statusRed");
+        }
+
+        else if (animList[j].immunity < 50) {
+            immubar[j].classList.add("statusOrange");
+        }
+        else {
+            immubar[j].classList.add("statusGreen");
+        }
+
+        //change fertbar color
+        if (animList[j].fertility < 25) {
+            fertbar[j].classList.add("statusRed");
+        }
+
+        else if (animList[j].fertility < 50) {
+            fertbar[j].classList.add("statusOrange");
+        }
+        else {
+            fertbar[j].classList.add("statusGreen");
+        }
+    }
+}
+
+
+
+
+
+
+// // ID INFO
+// let flavorResult = flavor[Math.floor(Math.random() * flavor.length)];
+// idInfo[i] = namedResult + flavorResult + " " + verdict; 
+// }
 
 //  Pronomen für Text
 //     if (sexResult === "♀️") { pronoun = "her"; }
@@ -85,22 +178,10 @@ function basics(){
 //         verdict = "While " + namedResult + "'s genetics may not contribute to a healthy re-population of the" + animResult + ", hopefully " + pronoun + " presence can still bring joy to you!";
 //     }
 
-    // /// DEFINIERE STATS
-// // Genetic Stats
 
 
-// /// WRITE ALL INFO
-// function write() {
 
 
-//    
-// }
-
-// /// get bars
-// var sizebar = document.querySelector("#sizebar")
-// var lifebar = document.querySelector("#lifebar")
-// var immubar = document.querySelector("#immubar")
-// var fertbar = document.querySelector("#fertbar")
 
 // // Gibt an wie viele Elemente im Array sind  
 // document.getElementById("animLenght").innerHTML = anim.length;
@@ -110,55 +191,8 @@ function basics(){
 
 
 // function write2 (){
-    
-//     /// Weite der Bar ändern je nach Stat
-//     immubar.setAttribute("style", 'width: ' + immu + '%');
-//     sizebar.setAttribute("style", 'width: ' + size + '%');
-//     lifebar.setAttribute("style", 'width: ' + life + '%');
-//     fertbar.setAttribute("style", 'width: ' + fert + '%');
 
-//     // Farbe der Bar ändern je nach Stat
-//     if (size < 25) {
-//         sizebar.classList.add("statusRed");
-//     }
-//         else if (size < 50) {
-//             sizebar.classList.add("statusOrange");
-//         }
-//             else {
-//                 sizebar.classList.add("statusGreen");
-//             }
-
-//     if (immu < 25) {
-//         immubar.classList.add("statusRed");
-//     }
-//         else if (immu < 50) {
-//             immubar.classList.add("statusOrange");
-//         }
-//             else {
-//                 immubar.classList.add("statusGreen");
-//             }
-
-//     if (fert < 25) {
-//         fertbar.classList.add("statusRed");
-//     }
-//         else if (fert < 50) {
-//             fertbar.classList.add("statusOrange");
-//         }
-
-//             else {
-//                 fertbar.classList.add("statusGreen");
-//             }
-
-        
-//     if (life < 25) {
-//         lifebar.classList.add("statusRed");
-//     }
-//         else if (life < 50) {
-//             lifebar.classList.add("statusOrange");
-//         }
-//             else {
-//                 lifebar.classList.add("statusGreen");
-//             }
+//    
 
 //     // FERTILITY WARNING
 //     if (fert < 10) { warning = "Do not expect offspring"; }
@@ -216,28 +250,28 @@ function basics(){
 
 
 
-// /// ADOPTION
-// function adoptionEffect() {
+/// ADOPTION
+function adoptionEffect() {
 
-//     // give image overlay when button in modal pressed
-//     var adoptionOverlay = document.querySelector(".overlayHere");
-//     adoptionOverlay.classList.add("adoptedOverlay");
+    // give image overlay when button in modal pressed
+    var adoptionOverlay = document.querySelector(".overlayHere");
+    adoptionOverlay.classList.add("adoptedOverlay");
 
-//     // overlay text also appears
-//     var appearText = document.querySelector(".overlayText");
-//     appearText.classList.add("overlayTextAppear");
+    // overlay text also appears
+    var appearText = document.querySelector(".overlayText");
+    appearText.classList.add("overlayTextAppear");
 
-//     // also disable adoption button
-//     document.querlySelectorAll("adoptionButton").disabled = true;
+    // also disable adoption button
+    document.querlySelectorAll("adoptionButton").disabled = true;
 
-//     //verstecke Modal Button
-//     var adoptionconfirm = document.querlySelectorAll("adoptionconfirm");
-//     adoptionconfirm.classList.add("diappearButton");
+    //verstecke Modal Button
+    var adoptionconfirm = document.querlySelectorAll("adoptionconfirm");
+    adoptionconfirm.classList.add("diappearButton");
 
-//     // ändert Text in Modal
-//     document.querlySelectorAll("adoptionModalText").innerHTML = "Thank you so much!";
+    // ändert Text in Modal
+    document.querlySelectorAll("adoptionModalText").innerHTML = "Thank you so much!";
 
 
-// }
+}
 
 

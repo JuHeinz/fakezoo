@@ -1,21 +1,33 @@
 console.log("Test script is connected!")
 
 // nodelist zu divs holen
-var div = document.querySelectorAll(".a");
-  
+var sizeHTML = document.querySelectorAll(".sizeClass");
+var ageHTML = document.querySelectorAll(".ageClass");
+
+var list = []
+
+
 // für jedes element von div function numGen ausführen
-for (var i = 0; i < div.length; i++) {
-//   console.log(i);
-  numGen();
+for (var i = 0; i < sizeHTML.length; i++) {
+    var animal = gen();
+    list.push(animal);
+
 }
 
 //random nummer generieren und zu jeden element von div einfügen
-function numGen () {
-num = Math.random();
-// console.log(num);
-div[i].innerHTML = num;
+// dieser code läuft i mal
+function gen() {
+    let age = Math.random();
+    let size = Math.random();
+    sizeHTML[i].innerHTML = age;
+    ageHTML[i].innerHTML = size;
 
+
+    // OBJEKT
+    var animal = {
+        Age: age,
+        Size: size,
+    };
+    return animal
 }
 
-// figure out how to return something
- 

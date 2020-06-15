@@ -93,7 +93,6 @@
       <p> Each time you load this site, a javascript funtion creates a new animal. The function picks a random value
         from arrays which contain all the possible species and names. Can you detect the naming pattern? Hint: It's
         copied from a wikipedia list, but which one? </p>
-        <button class="btn btn-primary donationBtn btn-block mt-1" onclick="bars()" type="button">Show more</button>
 
 
     </div>
@@ -198,7 +197,7 @@
             <p class="card-text" class="idInfo"></p>
 
             <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" data-toggle="modal" data-target="#adoptionModal"
+            <button type="button" id="adoptionButton" onclick="adoptionEffect(0);"
               class="btn btn-outline-primary float-l">
               <i class="fas fa-heart"></i> Adopt me!
             </button>
@@ -301,7 +300,7 @@
             <p class="card-text" class="idInfo"></p>
 
             <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" data-toggle="modal" data-target="#adoptionModal"
+            <button type="button" id="adoptionButton" onclick="adoptionEffect(1);"
               class="btn btn-outline-primary float-l">
               <i class="fas fa-heart"></i> Adopt me!
             </button>
@@ -406,7 +405,7 @@
             <p class="card-text" class="idInfo"></p>
 
             <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" data-toggle="modal" data-target="#adoptionModal"
+            <button type="button" id="adoptionButton" onclick="adoptionEffect(2);"
               class="btn btn-outline-primary float-l">
               <i class="fas fa-heart"></i> Adopt me!
             </button>
@@ -475,7 +474,7 @@
 
 
 
-      <!-- MODAL -->
+      <!-- MODAL
       <div id="adoptionModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -494,7 +493,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
 

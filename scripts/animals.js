@@ -80,8 +80,10 @@ var lifebar = document.querySelectorAll(".lifebar");
 var immubar = document.querySelectorAll(".immubar");
 var fertbar = document.querySelectorAll(".fertbar");
 
+for (i = 0; i<sizebar.length; i++) {
+    bars();
+}
 
-setTimeout(() => {  }, 2000);
 function bars() {
     console.log("Function bars is running!")
 
@@ -183,11 +185,6 @@ function bars() {
 
 
 
-// // Gibt an wie viele Elemente im Array sind  
-// document.getElementById("animLenght").innerHTML = anim.length;
-// document.getElementById("namedLenght").innerHTML = named.length;
-// document.getElementById("sexLenght").innerHTML = sex.length;
-// document.getElementById("combinations").innerHTML = anim.length * named.length * sex.length;
 
 
 // function write2 (){
@@ -251,27 +248,25 @@ function bars() {
 
 
 /// ADOPTION
-function adoptionEffect() {
+var adoptionOverlay = document.querySelectorAll('.overlayHere');
+var appearText = document.querySelectorAll(".overlayText");
+
+function adoptionEffect(id) {
 
     // give image overlay when button in modal pressed
-    var adoptionOverlay = document.querySelector(".overlayHere");
-    adoptionOverlay.classList.add("adoptedOverlay");
+    adoptionOverlay[id].classList.add("adoptedOverlay");
 
     // overlay text also appears
-    var appearText = document.querySelector(".overlayText");
-    appearText.classList.add("overlayTextAppear");
+    appearText[id].classList.add("overlayTextAppear");
 
-    // also disable adoption button
-    document.querlySelectorAll("adoptionButton").disabled = true;
-
-    //verstecke Modal Button
-    var adoptionconfirm = document.querlySelectorAll("adoptionconfirm");
-    adoptionconfirm.classList.add("diappearButton");
-
-    // ändert Text in Modal
-    document.querlySelectorAll("adoptionModalText").innerHTML = "Thank you so much!";
-
+    // // also disable adoption button
+    // document.querySelectorAll("adoptionButton").disabled = true;
 
 }
 
 
+// Gibt an wie viele Elemente im Array sind  
+document.getElementById("animLenght").innerHTML = anim.length;
+document.getElementById("namedLenght").innerHTML = named.length;
+document.getElementById("sexLenght").innerHTML = sex.length;
+document.getElementById("combinations").innerHTML = anim.length * named.length * sex.length;

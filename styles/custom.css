@@ -109,7 +109,7 @@ color: white;
 .btn-outline-primary
 {
     color: #0F7B57;
-    border-color: #0F7B57;}
+    border-color: rgb(15, 123, 87);}
 
 .btn-outline-primary:hover
 {
@@ -178,6 +178,10 @@ color: white;
 a .card-img-overlay{
    text-decoration: none;
    color: white;
+}
+
+.card{
+    border: none; 
 }
 
 /* Hover Overlay Effekt */
@@ -413,7 +417,8 @@ a .card-img-overlay{
     opacity: 0%;
 }
 
-.overlayTextAppear{
+
+.appear{
     opacity: 100%;
 }
 

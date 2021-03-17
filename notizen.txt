@@ -142,3 +142,7 @@ oder noch besser: forEach
    
     
 
+/// Object zu Array
+
+Object.keys(NamevomObject) ---> Alle Keys werden zu einem Array gemacht
+Object.values(NamevomObject) ---> Alle Values werden zu einem Array gemacht

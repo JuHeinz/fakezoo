@@ -239,6 +239,9 @@ a .card-img-overlay{
     margin:0;   /*reset margin of figure tag*/
     
 }
+.hidden{
+    visibility: hidden;
+}
 
 .bigimage {
     display:block; /*remove inline-block spaces*/
@@ -248,7 +251,16 @@ a .card-img-overlay{
 }
 
 
-
+.progress .progress-bar {
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .4s;
+}
+@keyframes animateBar {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
    
  
 
@@ -418,6 +430,7 @@ a .card-img-overlay{
 }
 
 
+
 .appear{
     opacity: 100%;
 }
@@ -430,7 +443,16 @@ a .card-img-overlay{
     display: none;
 }
 
+.adoptionButton:disabled{
+    color: #AEAEAE;
+    border-color: #AEAEAE;
+}
 
+.adoptionButton:disabled:hover{
+    color: #AEAEAE;
+    border-color: #AEAEAE;
+    background-color: transparent;
+}
 
 /* MAP */
 

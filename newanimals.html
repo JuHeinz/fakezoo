@@ -106,28 +106,19 @@
       <section>
       <div class="jumbotron boxshadow">
 
-        <p class="lead">These aren't really the animals in the zoo, they are randomly generated.</p>
-        <p> Each time you load this site, a javascript funtion creates a new animal. The function picks a random value
-          from arrays which contain all the possible species and names. Can you detect the naming pattern? Hint: It's
-          copied from a wikipedia list, but which one? </p>
+        <p class="lead">These animals are randomly generated.</p>
+        <p> Pure .js simulation of retrieval from database. Includes randomuser.me API for name and gender selection.</p>
         
         <div class="d-flex justify-content-center align-items-center m-1 p-1">
-          <!--NEW ANIMALS BUTTON-->
-          <section> 
-                     <button type="button" class="btn newAnimalsButton btn-outline-primary ">
-                      + Show more animals
-                    </button>
-        </section>
+          
         </div>
       </div>
     </section>
 
     <!--ANIMAL CARD Static -->
     
-
-
     <section>
-      <div class="card-deck "> 
+      <div class="row" id="holder"> 
      
         
     
@@ -140,26 +131,14 @@
       
     <!--NEW ANIMALS BUTTON-->
     <section>
-      <div class="d-flex justify-content-center align-items-center m-1 p-1">
+      
+      <div class="d-flex justify-content-center align-items-center m-2 p-1">
         <button type="button" class="btn btn-outline-primary newAnimalsButton">
-           + Show more animals
+           Show more
         </button>
       </div>
     </section>
      
-        <!--KOMBINATIONEN -->
-    <section>
-      <div class=" font-weight-light font-italic text-muted boxshadow m-0">
-        <p>
-          Species in game (April 2020): <span class="bg-light" id="animLenght"></span>,
-          Names in generator: <span class="bg-light" id="namedLenght"></span>,
-          In-game sexes: <span class="bg-light" id="sexLenght"></span>,
-          Possible Combinations: <span class="bg-light" id="combinations"></span> </p>
-
-        <span id="id97"></span>
-
-      </div>
-    </section>
 
     </div>
   </main>
@@ -225,8 +204,11 @@
 
 
   <!-- Load my Javascript-File must be placed AFTER all used ids! -->
-  <script src="./newanimals.js"></script>
   <script src="scripts/cardBuilder.js"></script>
+  <script src="./newanimals.js"></script>
+  <script src="scripts/combiner.js"></script>
+  <script src="scripts/adoption.js"></script>
+
 
 
 

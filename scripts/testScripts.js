@@ -1,33 +1,21 @@
-console.log("Test script is connected!")
 
-// nodelist zu divs holen
-var sizeHTML = document.querySelectorAll(".sizeClass");
-var ageHTML = document.querySelectorAll(".ageClass");
+class Poop{
+    constructor(){
+        let poop = document.createElement("h2");
+        poop.innerHTML= "dsafasf";
+        return poop;
+    } 
+}
 
-var list = []
-
-
-// für jedes element von div function numGen ausführen
-for (var i = 0; i < sizeHTML.length; i++) {
-    var animal = gen();
-    list.push(animal);
+const poopArray =[];
+function buildPoop(){
+   let myPoop = new Poop();
+   poopArray.push(myPoop);
 
 }
 
-//random nummer generieren und zu jeden element von div einfügen
-// dieser code läuft i mal
-function gen() {
-    let age = Math.random();
-    let size = Math.random();
-    sizeHTML[i].innerHTML = age;
-    ageHTML[i].innerHTML = size;
-
-
-    // OBJEKT
-    var animal = {
-        Age: age,
-        Size: size,
-    };
-    return animal
+function appendPoop(){
+for (var e of poopArray){
+    cardDeck.append(e);
 }
-
+}

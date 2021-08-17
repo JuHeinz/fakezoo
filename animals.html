@@ -1,779 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake Zoo | The best zoo that doesn't exist!</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Hier stände was fürs SEO.">
-  
-    <!-- Script for navbar opacity change -->
-    <script src="./scripts/general.js"></script>
-  
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
-    <!-- Mein CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/custom.css">
-  
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-    <!--Favicon-->
-    <link rel="icon" type="image/png" href="./images/hnet.com-image.ico">
-  
-  </head>
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Zoo | The best zoo that doesn't exist!</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Hier stände was fürs SEO.">
+
+  <!-- Script for navbar opacity change -->
+  <script src="./scripts/general.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Mein CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/custom.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="./images/hnet.com-image.ico">
+
+  <!--Axios-->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
 
 <body>
- 
- <!-- NAV 1 -->
- <nav class="navbar navbar-light bgDarkG justify-content-center">
-  <a class="navbar-brand" href="#">
-    <a class="navbar-brand" href="./index.html"> Fake <img src="./images/skunk.svg" width="50" height="50" alt=""
-        loading="lazy" alt=""> Zoo</a>
+  <!-- NAV 1 -->
+  <nav class="navbar navbar-light bgDarkG justify-content-center">
+    <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./index.html"> Fake <img src="./images/skunk.svg" width="50" height="50" alt=""
+          loading="lazy" alt=""> Zoo</a>
 
-  </a>
-</nav>
-<!-- NAV 2 -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top justify-content-center" id="nav2">
+    </a>
+  </nav>
+
+  <!-- NAV 2 -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top justify-content-center" id="nav2">
 
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <!-- alles in folgendem div wird collapsed -->
-  <div class="collapse navbar-collapse " id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <!-- To be collapsed: -->
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
 
-      <!-- Animals -->
-      <li class="nav-item">
-        <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals</a>
-      </li>
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Home </a>
+        </li>
 
-      <!-- map -->
-      <li class="nav-item">
-        <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map</a>
-      </li>
+        <!-- Animals -->
+        <li class="nav-item">
+          <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals </a>
+        </li>
 
-      <!-- Donate -->
-      <li class="nav-item">
-        <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us</a>
-      </li>
+        <!-- Map -->
+        <li class="nav-item">
+          <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map </a>
+        </li>
 
-      <!-- Ticket -->
-      <li class="nav-item">
-        <a class=" nav-link btn btn btn-outline-light my-2 my-sm-0 " href="./tickets.html" role="button">Buy
-          tickets!</a>
-    </ul>
+        <!-- Donate -->
+        <li class="nav-item">
+          <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us </a>
+        </li>
 
-  </div>
-</nav>
+        <!-- Ticket -->
+        <li class="nav-item">
+          <a class="nav-link" href="./tickets.html"><i class="fas fa-ticket-alt"></i> </i> Your visit </a>
+      </ul>
 
-    <!--HEADER-->
-    <header>
-    <!--IMAGE-->
+    </div>
+  </nav>
+
+  <!--HEADER-->
+  <header>
+    <!--Image-->
     <div class="headerImage">
       <img src="./images/redpanda.jpg" class="img-fluid bigimage">
       <h1 class="display-4 headerH w-100"><i class="fas fa-frog"></i> Our Animals</h1>
     </div>
 
 
-    <!--BREADCRUMBS-->
+    <!--Breadcrumbs-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="./index.html">Home</a>
+      <li class="breadcrumb-item active" aria-current="page">Our Animals
+    </ol>
 
-    <div class="simpleBox pb-1">
-      <div class="container">
-        <p class="text-muted"><a class="text-muted" href="/index.html">Home </a>/ Our Animals</p>
-      </div>
-    </div>
-
-    <!-- HEADER END HEADER END HEADER END HEADER END -->
   </header>
-  
+
   <!-- MAIN -->
   <main>
     <div class="container ">
 
-      <!--PAGE INTRO-->
+      <!--Intro-->
       <section>
-      <div class="jumbotron boxshadow">
+        <div class="jumbotron boxshadow">
 
-        <p class="lead">These aren't really the animals in the zoo, they are randomly generated.</p>
-        <p> Each time you load this site, a javascript funtion creates a new animal. The function picks a random value
-          from arrays which contain all the possible species and names. Can you detect the naming pattern? Hint: It's
-          copied from a wikipedia list, but which one? </p>
+          <p class="lead">These animals are randomly generated.</p>
+          <p> Pure .js simulation of retrieval from database. Includes randomuser.me API for name and gender selection.
+          </p>
 
-        <div class="d-flex justify-content-center align-items-center m-1 p-1">
-          <button type="button" id="" onclick="animals();" class="btn btn-outline-primary">
-            <i class="fas fa-sync"></i> New Animals
+          <div class="d-flex justify-content-center align-items-center m-1 p-1">
+
+          </div>
+        </div>
+      </section>
+
+      <!--Cards-->
+      <section>
+        <div class="card-deck" id="holder">
+        </div>
+      </section>
+
+      <!--Button-->
+      <section>
+        <div class="d-flex justify-content-center align-items-center mb-3 mt-1 p-1">
+          <button type="button" class="btn btn-outline-primary newAnimalsButton">
+            Show more
           </button>
         </div>
-      </div>
-    </section>
-
-    <!--ANIMAL CARDS-->
-    <section>
-      <div class="card-deck ">
-        <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
-        <!-- <div class=" col-lg-4 col-md-6 col-sm-6 pb-3"> -->
-        <div class="card boxshadow generation">
-
-          <!-- Image -->
-          <div class="imgContainer">
-            <img src="./images/placeholderanimal.png" class="card-img-top pic">
-            <div class="placeOverlay">
-              <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
-            </div>
-          </div>
-
-          <div class="card-body bgDarkG">
-            <div class="row no-gutters">
-              <div class="col">
-
-                <!-- Name -->
-                <h5 class="card-title text-white mb-0 idName"></h5>
-              </div>
-
-              <!-- Warning Pills -->
-              <div class="col">
-                <span class="badge badge-pill badge-danger idConservation">Critically endangered!</span>
-                <span class="badge badge-pill badge-secondary text-center idWarning">Do not expect offspring!</span>
-              </div>
-            </div>
-
-            <!-- Sex & Species -->
-            <p class="card-text text-white">
-              <span class="idSex">female</span>
-              <span class="idSpecies"></span>
-            </p>
-          </div>
-
-          <!-- Fert -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Fertility:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idFert"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Size -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Size:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idSize"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Life -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Longevity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idLife"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Immu -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Immunity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idImmu"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Info = Verdict & Flavor -->
-          <div class="card-body">
-            <p class="card-text idInfo"></p>
-
-            <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" onclick="adoptionEffect(0);"
-              class="btn btn-outline-primary float-l">
-              <i class="fas fa-heart"></i> Adopt me!
-            </button>
-
-          </div>
-        </div>
-
-        <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->
-        <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
-        <div class="card boxshadow generation">
-
-          <!-- Image -->
-          <div class="imgContainer">
-            <img src="./images/placeholderanimal.png" class="card-img-top pic">
-            <div class="placeOverlay">
-              <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
-            </div>
-          </div>
-
-          <div class="card-body bgDarkG">
-            <div class="row no-gutters">
-              <div class="col">
-
-                <!-- Name -->
-                <h5 class="card-title text-white mb-0 idName"></h5>
-              </div>
-
-              <!-- Warning Pills -->
-              <div class="col">
-                <span class="badge badge-pill badge-danger idConservation">Critically endangered!</span>
-                <span class="badge badge-pill badge-secondary text-center idWarning">Do not expect offspring!</span>
-              </div>
-            </div>
-
-            <!-- Sex & Species -->
-            <p class="card-text text-white">
-              <span class="idSex">female</span>
-              <span class="idSpecies"></span>
-            </p>
-          </div>
-
-          <!-- Fert -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Fertility:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idFert"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Size -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Size:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idSize"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Life -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Longevity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idLife"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Immu -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Immunity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idImmu"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Info = Verdict & Flavor -->
-          <div class="card-body">
-            <p class="card-text idInfo"></p>
-
-            <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" onclick="adoptionEffect(1);"
-              class="btn btn-outline-primary float-l">
-              <i class="fas fa-heart"></i> Adopt me!
-            </button>
-
-          </div>
-        </div>
-
-        <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->
-
-        <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
-        <div class="card boxshadow generation">
-
-          <!-- Image -->
-          <div class="imgContainer">
-            <img src="./images/placeholderanimal.png" class="card-img-top pic">
-            <div class="placeOverlay">
-              <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
-            </div>
-          </div>
-
-          <div class="card-body bgDarkG">
-            <div class="row no-gutters">
-              <div class="col">
-
-                <!-- Name -->
-                <h5 class="card-title text-white mb-0 idName"></h5>
-              </div>
-
-              <!-- Warning Pills -->
-              <div class="col">
-                <span class="badge badge-pill badge-danger idConservation">Critically endangered!</span>
-                <span class="badge badge-pill badge-secondary text-center idWarning">Do not expect offspring!</span>
-              </div>
-            </div>
-
-            <!-- Sex & Species -->
-            <p class="card-text text-white">
-              <span class="idSex">female</span>
-              <span class="idSpecies"></span>
-            </p>
-          </div>
-
-          <!-- Fert -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Fertility:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idFert"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Size -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Size:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idSize"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Life -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Longevity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idLife"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Immu -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Immunity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idImmu"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Info = Verdict & Flavor -->
-          <div class="card-body">
-            <p class="card-text idInfo"></p>
-
-            <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" onclick="adoptionEffect(2);"
-              class="btn btn-outline-primary float-l">
-              <i class="fas fa-heart"></i> Adopt me!
-            </button>
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="card-deck mt-2 mb-2 ">
-        <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->
-        <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
-        <div class="card boxshadow generation">
-
-          <!-- Image -->
-          <div class="imgContainer">
-            <img src="./images/placeholderanimal.png" class="card-img-top pic">
-            <div class="placeOverlay">
-              <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
-            </div>
-          </div>
-
-          <div class="card-body bgDarkG">
-            <div class="row no-gutters">
-              <div class="col">
-
-                <!-- Name -->
-                <h5 class="card-title text-white mb-0 idName"></h5>
-              </div>
-
-              <!-- Warning Pills -->
-              <div class="col">
-                <span class="badge badge-pill badge-danger idConservation">Critically endangered!</span>
-                <span class="badge badge-pill badge-secondary text-center idWarning">Do not expect offspring!</span>
-              </div>
-            </div>
-
-            <!-- Sex & Species -->
-            <p class="card-text text-white">
-              <span class="idSex">female</span>
-              <span class="idSpecies"></span>
-            </p>
-          </div>
-
-          <!-- Fert -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Fertility:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idFert"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Size -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Size:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idSize"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Life -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Longevity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idLife"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Immu -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Immunity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idImmu"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Info = Verdict & Flavor -->
-          <div class="card-body">
-            <p class="card-text idInfo"></p>
-
-            <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" onclick="adoptionEffect(3);"
-              class="btn btn-outline-primary float-l">
-              <i class="fas fa-heart"></i> Adopt me!
-            </button>
-
-          </div>
-        </div>
-
-        <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->
-        <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
-        <div class="card boxshadow generation">
-
-          <!-- Image -->
-          <div class="imgContainer">
-            <img src="./images/placeholderanimal.png" class="card-img-top pic">
-            <div class="placeOverlay">
-              <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
-            </div>
-          </div>
-
-          <div class="card-body bgDarkG">
-            <div class="row no-gutters">
-              <div class="col">
-
-                <!-- Name -->
-                <h5 class="card-title text-white mb-0 idName"></h5>
-              </div>
-
-              <!-- Warning Pills -->
-              <div class="col">
-                <span class="badge badge-pill badge-danger idConservation">Critically endangered!</span>
-                <span class="badge badge-pill badge-secondary text-center idWarning">Do not expect offspring!</span>
-              </div>
-            </div>
-
-            <!-- Sex & Species -->
-            <p class="card-text text-white">
-              <span class="idSex">female</span>
-              <span class="idSpecies"></span>
-            </p>
-          </div>
-
-          <!-- Fert -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Fertility:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idFert"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Size -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Size:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idSize"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Life -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Longevity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idLife"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Immu -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Immunity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idImmu"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Info = Verdict & Flavor -->
-          <div class="card-body">
-            <p class="card-text idInfo"></p>
-
-            <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" onclick="adoptionEffect(4);"
-              class="btn btn-outline-primary float-l">
-              <i class="fas fa-heart"></i> Adopt me!
-            </button>
-
-          </div>
-        </div>
-        <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->
-
-        <!--ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START ANIMAL START-->
-        <div class="card boxshadow generation">
-
-          <!-- Image -->
-          <div class="imgContainer">
-            <img src="./images/placeholderanimal.png" class="card-img-top pic">
-            <div class="placeOverlay">
-              <p class="overlayText"><i class="fas fa-heart"></i>Adopted!</p>
-            </div>
-          </div>
-
-          <div class="card-body bgDarkG">
-            <div class="row no-gutters">
-              <div class="col">
-
-                <!-- Name -->
-                <h5 class="card-title text-white mb-0 idName"></h5>
-              </div>
-
-              <!-- Warning Pills -->
-              <div class="col">
-                <span class="badge badge-pill badge-danger idConservation">Critically endangered!</span>
-                <span class="badge badge-pill badge-secondary text-center idWarning">Do not expect offspring!</span>
-              </div>
-            </div>
-
-            <!-- Sex & Species -->
-            <p class="card-text text-white">
-              <span class="idSex">female</span>
-              <span class="idSpecies"></span>
-            </p>
-          </div>
-
-          <!-- Fert -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Fertility:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar fertbar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idFert"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Size -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Size:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar sizebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idSize"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Life -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Longevity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar lifebar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idLife"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Immu -->
-          <div class="row align-items-center progressRow">
-            <div class="col-4 text-muted">
-              Immunity:
-            </div>
-            <div class="col-8">
-              <div class="progress">
-                <div class="progress-bar immubar" role="progressbar" style="width: 25%">
-                  <span class="geneticStat idImmu"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Info = Verdict & Flavor -->
-          <div class="card-body">
-            <p class="card-text idInfo"></p>
-
-            <!-- Adoption Button -->
-            <button type="button" id="adoptionButton" onclick="adoptionEffect(5);"
-              class="btn btn-outline-primary float-l">
-              <i class="fas fa-heart"></i> Adopt me!
-            </button>
-
-          </div>
-        </div>
-        <!--ANIMAL END ANIMAL END ANIMAL END ANIMAL END END ANIMAL END ANIMAL ENDEND ANIMAL END ANIMAL END -->
-      </div>
-    </section>
-
-    <!--NEW ANIMALS BUTTON-->
-    <section>
-      <div class="d-flex justify-content-center align-items-center m-1 p-1">
-        <button type="button" id="" onclick="animals();" class="btn btn-outline-primary">
-          <i class="fas fa-sync"></i> New Animals
-        </button>
-      </div>
-    </section>
-     
-        <!--KOMBINATIONEN -->
-    <section>
-      <div class=" font-weight-light font-italic text-muted boxshadow m-0">
-        <p>
-          Species in game (April 2020): <span class="bg-light" id="animLenght"></span>,
-          Names in generator: <span class="bg-light" id="namedLenght"></span>,
-          In-game sexes: <span class="bg-light" id="sexLenght"></span>,
-          Possible Combinations: <span class="bg-light" id="combinations"></span> </p>
-
-        <span id="id97"></span>
-
-      </div>
-    </section>
+      </section>
 
     </div>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer justify-content-center">
+    <!-- Logos -->
+    <div class="col-12 ">
 
-    <!-- SOCIAL -->
+      <img class="footerImg" src="./images/pet.svg" alt="logo1">
+      <img class="footerImg" src="./images/guarantee.svg" alt="logo1">
+
+      <img class="footerImg" src="./images/safe.svg" alt="logo1">
+
+    </div>
+  </footer>
+
+  <footer class="footer justify-content-center bg-dark">
+    <!-- Social -->
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -802,7 +177,7 @@
         </div>
 
 
-        <!-- FOOTER LINKS -->
+        <!-- Footer Links -->
         <div class="col-12 footer-link-box">
           <a href="https://wikipedia.org" class="footer-link">Careers</a>
           <a href="https://wikipedia.org" class="footer-link">Contact Us</a>
@@ -812,15 +187,7 @@
           <a href="https://wikipedia.org" class="footer-link">Regulations</a>
         </div>
 
-        <!-- LOGOS -->
-        <div class="col-12 ">
 
-          <img class="footerImg" src="./images/pet.svg" alt="logo1">
-          <img class="footerImg" src="./images/guarantee.svg" alt="logo1">
-
-          <img class="footerImg" src="./images/safe.svg" alt="logo1">
-
-        </div>
 
         <div class="col-12 text-white mt-2">
           © FakeZoo Inc.
@@ -829,9 +196,13 @@
       </div>
   </footer>
 
+  <!-- SCRIPTS -->
+  <script src="scripts/cardBuilder.js"></script>
+  <script src="scripts/animals.js"></script>
+  <script src="scripts/combiner.js"></script>
+  <script src="scripts/adoption.js"></script>
+  <script src="scripts/testScripts.js"></script>
 
-  <!-- Load my Javascript-File must be placed AFTER all used ids! -->
-  <script src="./scripts/animals.js"></script>
 
 
 

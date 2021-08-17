@@ -1,21 +1,8 @@
+let icon = document.querySelector("#foo");
 
-class Poop{
-    constructor(){
-        let poop = document.createElement("h2");
-        poop.innerHTML= "dsafasf";
-        return poop;
-    } 
+const onMouseMove = (e) => {
+    icon.style.left = e.pageX + 'px';
+    icon.style.top = e.pageY + 'px';
 }
 
-const poopArray =[];
-function buildPoop(){
-   let myPoop = new Poop();
-   poopArray.push(myPoop);
-
-}
-
-function appendPoop(){
-for (var e of poopArray){
-    cardDeck.append(e);
-}
-}
+document.addEventListener("mousemove", onMouseMove)

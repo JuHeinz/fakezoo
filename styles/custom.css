@@ -1,15 +1,13 @@
-
 /* Grün:
 Hell: #139B6D
 mittel: #10865F
 dunkel: #0F7B57
 
-
 Orange:
 hell: #FF9017
 dunkel: #EB8515
 
-grau
+Grau:
 Hell: #ffffff
 mittel: #F1F1F1
 dunkel:#cecccc */
@@ -21,167 +19,162 @@ dunkel:#cecccc */
     text-decoration: red;
 }
 
+#foo {
+    position: absolute;
+    border: #0F7B57 1px solid;
+}
+
 .boxshadow {
-    -webkit-box-shadow: 5px 5px 17px 0px #AEAEAE; 
+    -webkit-box-shadow: 5px 5px 17px 0px #AEAEAE;
     box-shadow: 5px 5px 17px 0px #AEAEAE;
 }
+
 .polygon {
-   
     clip-path: polygon(0% 98%, 6% 94%, 17% 97%, 29% 93%, 33% 96%, 43% 94%, 52% 97%, 62% 94%, 71% 98%, 77% 93%, 84% 97%, 90% 94%, 97% 96%, 100% 93%, 100% 100%, 100% 0%, 0% 0%);
 }
 
-body
-{
-background: #e6e9e9;
+body {
+    background: #e6e9e9;
     background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
     -webkit-font-smoothing: antialiased;
 }
 
 body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  body::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.349);        /* color of the tracking area */
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(1, 8, 6);    /* color of the scroll thumb */
+    width: 12px;
+    /* width of the entire scrollbar */
+}
 
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.349);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(1, 8, 6);
+    /* color of the scroll thumb */
     /* border: 3px solid orange;  creates padding around scroll thumb */
-  }
-
-    
+}
 
 /* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
 
-.navbar
-{
+.navbar {
     background-color: rgb(0, 0, 0);
-
-
 }
 
 .navbar-collapse {
     flex-grow: 0;
-
 }
 
-.navbar2Scroll{
+.navbar2Scroll {
     background-color: rgba(0, 0, 0, 0.397);
-
 }
 
-.navbar-light .navbar-nav .nav-link
-{
+.navbar-light .navbar-nav .nav-link {
     color: white;
-    margin-left: 1rem;
-
 }
 
+.nav-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.425);
+}
 
-.navbar-light .navbar-nav .nav-link:hover
-{
+.nav-item:last-child {
+    border-right: transparent;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
     color: #FF9017;
 }
 
-
-.navbar-light .navbar-brand
-{
-color: white;
+.navbar-light .navbar-brand {
+    color: white;
     font-weight: 700;
     text-shadow: 2px 2px 0px darkslategrey;
-    
 }
 
-.navbar-light .navbar-brand:hover
-{
+.navbar-light .navbar-brand:hover {
     color: #FF9017;
 }
 
-
-#navbarSupportedContent .btn:hover
-{
+#navbarSupportedContent .btn:hover {
     background-color: #FF9017;
     color: white;
-    border:1px solid #FF9017; 
+    border: 1px solid #FF9017;
 }
 
-
-.btn-outline-primary
-{
+.btn-outline-primary {
     color: #0F7B57;
-    border-color: rgb(15, 123, 87);}
+    border-color: rgb(15, 123, 87);
+}
 
-.btn-outline-primary:hover
-{
+.btn-outline-primary:hover {
     color: white;
     border-color: #FF9017;
-    background-color:#FF9017 
+    background-color: #FF9017
 }
 
-
-.btn-primary{
+.btn-primary {
     color: white;
     border-color: #FF9017;
-    background-color:#FF9017 
-    
+    background-color: #FF9017
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     color: white;
     border-color: #FF9017;
-    background-color:#EB8515 
-    
+    background-color: #EB8515
 }
 
-.navbar-light .navbar-toggler-icon 
-{
-    color: white;
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.308);
 }
 
-
-.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+.navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
     background-color: #139B6D;
     color: white;
 }
 
-/* STARTSEITE */
+/* BREAD CRUMB */
+
+.breadcrumb-item a{
+    color: #0F7B57;
+}
 
 /* SLIDESHOW */
-.carouselImg{
+
+.carouselImg {
     opacity: 0.5;
 }
 
-.carouselUnderlay{
+.carouselUnderlay {
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0; 
+    right: 0;
     height: 100%;
     width: 100%;
     background-color: rgb(3, 37, 26);
-
 }
 
-.carouselH{
+.carouselH {
     background-color: #0F7B57;
     width: 100%;
 }
 
 /* Card mit ganzem Bild */
 
-.card-img-overlay{
+.card-img-overlay {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-a .card-img-overlay{
-   text-decoration: none;
-   color: white;
+a .card-img-overlay {
+    text-decoration: none;
+    color: white;
 }
 
-.card{
-    border: none; 
+.card {
+    border: none;
 }
 
 /* Hover Overlay Effekt */
@@ -198,14 +191,15 @@ a .card-img-overlay{
     transition: 0.6s ease-in;
     background-color: #0F7B57;
     background-image: url("./images/pattern.jpg");
-  }
-  
-  .overlayContainer2{
+}
+
+.overlayContainer2 {
     position: relative;
-  }
-  .overlayContainer2:hover .overlay2 {
+}
+
+.overlayContainer2:hover .overlay2 {
     opacity: 1;
-  }
+}
 
 .overlay2Ttext {
     color: white;
@@ -218,38 +212,41 @@ a .card-img-overlay{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-/* HEADER HEADER HEADER HEADER HEADER HEADER */
 
-.headerH
-{
- /* absolute entfernt das Element aus dem Flow des Dokuments, alle anderen Elemente werden angezeigt als würde das Element gar nciht existieren. Es schwebt also wie ein Geist vor dem Header Image */
+/* HEADER */
+
+.headerH {
+    /* absolute entfernt das Element aus dem Flow des Dokuments, alle anderen Elemente werden angezeigt als würde das Element gar nciht existieren. Es schwebt also wie ein Geist vor dem Header Image */
     position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .headerImage {
-/* relative nimmt das Element aus dem normalen Flow der Documents heraus und sorgt afür, dass wir es seperat modifizieren können ohne andere Elemente zu beeinflussen */
+    /* relative nimmt das Element aus dem normalen Flow der Documents heraus und sorgt afür, dass wir es seperat modifizieren können ohne andere Elemente zu beeinflussen */
     position: relative;
     text-align: center;
     color: white;
-    width:100%; /*container-width*/
-    overflow:hidden; /*hide bounds of image */
-    margin:0;   /*reset margin of figure tag*/
-    
+    width: 100%;
+    /*container-width*/
+    overflow: hidden;
+    /*hide bounds of image */
+    margin: 0;
+    /*reset margin of figure tag*/
 }
-.hidden{
-    visibility: hidden;
+
+.hidden {
+    display: none;
 }
 
 .bigimage {
-    display:block; /*remove inline-block spaces*/
-    width:100%; /*make image streatch*/
-    margin:-10% 0;
-
+    display: block;
+    /*remove inline-block spaces*/
+    width: 100%;
+    /*make image streatch*/
+    margin: -10% 0;
 }
-
 
 .progress .progress-bar {
     animation-name: animateBar;
@@ -257,143 +254,114 @@ a .card-img-overlay{
     animation-timing-function: ease-in;
     animation-duration: .4s;
 }
+
 @keyframes animateBar {
-    0% {transform: translateX(-100%);}
-    100% {transform: translateX(0);}
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
-   
- 
 
+/* Makes Display-4 Texts smaller on index when screen < 1000*/
 
+@media only screen and (max-width: 1000px) {
+    .card-img-overlay .display-4, .d-flex .display-4 {
+        font-size: 2rem;
+    }
+}
 
+/* COLORS  */
 
-
-/* COLOR COLOR COLOR COLOR COLOR COLOR COLOR COLOR COLOR  */
-
-.bgDarkG
-{
+.bgDarkG {
     background-color: #0F7B57;
-
 }
 
-.bgMidG
-{
+.bgMidG {
     background-color: #10865F;
-
 }
 
-
-.bgBrightG
-{
+.bgBrightG {
     background-color: #139B6D;
-
 }
 
-
-.bgDarkGrey
-{
+.bgDarkGrey {
     background-color: #cecccc;
-
 }
 
-.bgMidGrey
-{
+.bgMidGrey {
     background-color: #F1F1F1;
-
 }
 
-.bgBrightO
-{
+.bgBrightO {
     background-color: #FF9017;
-
 }
 
-.bgDarkO
-{
+.bgDarkO {
     background-color: #EB8515;
-
 }
 
+/* SMALL BOX */
 
-
-
-
-
-/* SMALL BOX SMALL BOX SMALL BOX SMALL BOX SMALL BOX */
-
-.smallBox
-{
+.smallBox {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     margin: 1em 0 1em 0;
     padding: 1em;
     background: #f1f1f1;
-    text-align: center; 
+    text-align: center;
 }
 
-
-
-
-.simpleBox
-{
+.simpleBox {
     background: #f1f1f1;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
-    padding: 1rem; 
+    padding: 1rem;
     margin-bottom: 1rem;
 }
 
-
-
-/* ANIMALS ANIMALS ANIMALS */
+/* ANIMALS.html */
 
 .progress {
     border-radius: 0;
 }
 
-
-.progressRow{
-     border-bottom: 1px solid gray;
-     margin:0;
-  
+.progressRow {
+    border-bottom: 1px solid gray;
+    margin: 0;
 }
 
-.progress-bar{
+.progress-bar {
     padding-left: 0;
     margin: 0;
 }
 
-#warning
-{
+#warning {
     font-weight: bold;
     background-color: indianred;
     width: 50%;
     margin: auto;
-    border-radius: 50px; 
+    border-radius: 50px;
 }
 
 .geneticStat {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.statusGreen
-{
+.statusGreen {
     background-color: #139B6D;
 }
 
-.statusOrange
-{
+.statusOrange {
     background-color: #FF9017;
-
 }
-.statusRed
-{
+
+.statusRed {
     background-color: red;
 }
 
-
-
-
 /* Image */
+
 .imgContainer {
     position: relative;
 }
@@ -413,10 +381,9 @@ a .card-img-overlay{
     opacity: .5;
     transition: .3s ease;
     background-color: #139B6D;
-    
 }
-  
-.overlayText{
+
+.overlayText {
     color: white;
     font-size: 3rem;
     text-align: center;
@@ -429,13 +396,11 @@ a .card-img-overlay{
     opacity: 0%;
 }
 
-
-
-.appear{
+.appear {
     opacity: 100%;
 }
 
-.diappearButton{
+.diappearButton {
     display: none;
 }
 
@@ -443,12 +408,12 @@ a .card-img-overlay{
     display: none;
 }
 
-.adoptionButton:disabled{
+.adoptionButton:disabled {
     color: #AEAEAE;
     border-color: #AEAEAE;
 }
 
-.adoptionButton:disabled:hover{
+.adoptionButton:disabled:hover {
     color: #AEAEAE;
     border-color: #AEAEAE;
     background-color: transparent;
@@ -456,35 +421,61 @@ a .card-img-overlay{
 
 /* MAP */
 
-.mapcell {
-    margin: 0;
-    padding: 0;
+
+* {
+    box-sizing: border-box;
 }
 
+.img-zoom-container {
+    position: relative;
+}
+
+.img-zoom-lens {
+    position: absolute;
+    border: 1px solid #139B6D;
+    /*set the size of the lens:*/
+    width: 40px;
+    height: 40px;
+}
+
+.img-zoom-result {
+    border: 1px solid white;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+    position:absolute;
+}
+
+
+/*DONATIONS*/
+.donation-list .active{
+    background-color: #0F7B57;
+}
 
 /* FOOTER */
 
-.footer{
-    background-color:#0F7B57;
+.footer {
+    background-color: #0F7B57;
     padding: 2rem;
     text-align: center;
 }
+footer:first-of-type {
+    margin-top: 1rem;
+}
 
-.social-icon  {
+.social-icon {
     color: white;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     text-decoration: none;
 }
 
-
 .footer-link-box {
     margin-bottom: 1.5rem;
     margin-top: 1rem;
-
 }
 
-.footer-link{
+.footer-link {
     color: white;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -494,5 +485,4 @@ a .card-img-overlay{
 .footerImg {
     width: 50px;
     height: 50px;
-
 }

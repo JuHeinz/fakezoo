@@ -66,6 +66,7 @@ class Card {
         img.classList.add("card-img-top", "pic")
         img.src = "./images/animals/undefined.jpg"
         placeOverlay.classList.add("placeOverlay");
+        divPills.classList.add("divPills");
 
 
         //in adoptedOverlay in imgContainer
@@ -75,7 +76,7 @@ class Card {
         //cardBody
         cardBody.classList.add("card-body", "bgDarkG");
         divName.classList.add("col");
-        divPills.classList.add("col");
+        divPills.classList.add("col", "hidden");
         row.classList.add("row");
 
         //Name & Species
@@ -84,7 +85,7 @@ class Card {
 
         //Set Styles for Stat Elements
         for (let e of statNameDiv) {
-            e.classList.add("col-4", "text-muted");
+            e.classList.add("col-4", "text-muted", "text-truncate");
             e.innerText = "Stat Name";
 
         }

@@ -28,7 +28,10 @@ function combine() {
     //PILLS
     //remove hidden class from Pill if Animal is endangered.
     if (endangeredAnimals.includes(animalList[i].species)) {
+        cardArray[i].querySelector(".divPills").classList.remove("hidden");
         cardArray[i].querySelector(".badge").classList.remove("hidden");
+
+
     }
     //STATS
     //Stat Names

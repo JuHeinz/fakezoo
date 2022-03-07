@@ -11,7 +11,6 @@ class Animal {
         //Species-Namen nehmen und Leerzeichen, ' und - entfernen. Für Bild Src wichtig.
         this.cleanSpecies = this.species.replace(/\s/g, '').replace(/'/g, '').replace(/-/g, '')
     }
-
 }
 
 
@@ -26,6 +25,8 @@ function createThree() {
     for (let i = 0; i < 3; i++) {
         create()
     }
+    window.scrollTo(0,document.body.scrollHeight);
+
 }
 
 //CREATE

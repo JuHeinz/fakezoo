@@ -1,7 +1,5 @@
 //Bereits existierendes Card Deck
 const cardDeck = document.querySelector("#holder");
-console.log("CardBuilder.js connected")
-
 
 
 const cardArray = [];
@@ -24,7 +22,6 @@ class Card {
         let sexSpan = document.createElement("span");
         let speciesSpan = document.createElement("span");
         let divName = document.createElement("div");
-        let divPills = document.createElement("div");
         let row = document.createElement("div");
         let lowerCardBody = document.createElement("div");
         let bioP = document.createElement("p");
@@ -61,12 +58,11 @@ class Card {
         col.classList.add("col-sm-12", "col-md-4", "mb-4");
         card.classList.add("card", "boxshadow");
         imgContainer.classList.add("imgContainer");
-        conserWarn.classList.add("badge", "badge-pill", "badge-danger", "hidden")
+        conserWarn.classList.add("conservation-pill", "badge", "badge-pill", "badge-danger", "hidden")
         conserWarn.innerText = "Critically endangered!"
         img.classList.add("card-img-top", "pic")
         img.src = "./images/animals/undefined.jpg"
         placeOverlay.classList.add("placeOverlay");
-        divPills.classList.add("divPills");
 
 
         //in adoptedOverlay in imgContainer
@@ -74,14 +70,15 @@ class Card {
         overlayText.innerText = "Adopted! ♥"
 
         //cardBody
-        cardBody.classList.add("card-body", "bgDarkG");
+        cardBody.classList.add("card-body", "animal-card-body",);
         divName.classList.add("col");
-        divPills.classList.add("col", "hidden");
         row.classList.add("row");
+        speciesSpan.classList.add("speciesSpan")
+        sexSpan.classList.add("sexSpan")
 
         //Name & Species
         nameh5.classList.add("card-title", "text-white", "mb-0")
-        sexSpeciesP.classList.add("card-text", "text-white")
+        sexSpeciesP.classList.add("card-text", "text-white",)
 
         //Set Styles for Stat Elements
         for (let e of statNameDiv) {
@@ -118,7 +115,7 @@ class Card {
         bioP.classList.add("card-text")
 
         //Adoption Button
-        adoptionButton.classList.add("btn", "btn-outline-primary", "float-l", "adoptionButton")
+        adoptionButton.classList.add("btn", "btn-primary", "adoptionButton")
         adoptionButton.setAttribute("type", "button")
         adoptionButton.innerText = "♥ Adopt me!"
 
@@ -139,13 +136,13 @@ class Card {
         //card body
         sexSpeciesP.append(sexSpan, speciesSpan);
         divName.append(nameh5, sexSpeciesP)
-        divPills.append(conserWarn);
-        row.append(divName, divPills);
+        row.append(divName);
         cardBody.append(row);
+        
         // //imgContainer
         overlayText.append(overlayIcon);
         placeOverlay.append(overlayText);
-        imgContainer.append(img, placeOverlay);
+        imgContainer.append(img, placeOverlay, conserWarn);
         card.append(imgContainer, cardBody);
         //
 

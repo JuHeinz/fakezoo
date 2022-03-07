@@ -4,34 +4,22 @@ mittel: #10865F
 dunkel: #0F7B57
 
 Orange:
-hell: #FF9017
-dunkel: #EB8515
+hell: #FF9017 
+mittel: #EB8515
+dunkel: #aa5f0f
 
 Grau:
-Hell: #ffffff
-mittel: #F1F1F1
-dunkel:#cecccc */
+hell: #e6e9e9
+mittel: #343a40
+dunkel:#212529 */
 
-.test {
-    border: 1px dashed red;
-    color: red;
-    background-color: red;
-    text-decoration: red;
-}
 
-#foo {
-    position: absolute;
-    border: #0F7B57 1px solid;
-}
-
+/* GENERAL */
 .boxshadow {
     -webkit-box-shadow: 5px 5px 17px 0px #AEAEAE;
     box-shadow: 5px 5px 17px 0px #AEAEAE;
 }
 
-.polygon {
-    clip-path: polygon(0% 98%, 6% 94%, 17% 97%, 29% 93%, 33% 96%, 43% 94%, 52% 97%, 62% 94%, 71% 98%, 77% 93%, 84% 97%, 90% 94%, 97% 96%, 100% 93%, 100% 100%, 100% 0%, 0% 0%);
-}
 
 body {
     background: #e6e9e9;
@@ -55,44 +43,82 @@ body::-webkit-scrollbar-thumb {
     /* border: 3px solid orange;  creates padding around scroll thumb */
 }
 
-/* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
+.card {
+    border: none;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    /* Makes Display-4 Texts smaller on index when screen < 1000*/
+
+    .card-img-overlay .display-4, .d-flex .display-4 {
+        font-size: 2rem;
+    }
+}
+
+
+/* NAVBAR */
+.brandBar {
+    background: radial-gradient(circle at top left, transparent 25%, #0F7B57 25.5%, #0F7B57 36%, transparent 37%, transparent 100%), radial-gradient(circle at bottom right, transparent 34%, #0F7B57 34.5%, #0F7B57 45.5%, transparent 46%, transparent 100%);
+    background-size: 5em 5em;
+    background-color: #10865F !important;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    font-size: x-large;
+}
 
 .navbar {
-    background-color: rgb(0, 0, 0);
+    background-color: #343a40;
+    display: flex;
+    justify-content: space-evenly;
 }
+
+.navbar a {
+    color: white !important;
+}
+
+
 
 .navbar-collapse {
     flex-grow: 0;
 }
 
-.navbar2Scroll {
-    background-color: rgba(0, 0, 0, 0.397);
+.navbar-toggler {
+    border: 1px solid #e6e9e9;
+    color: white;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: white;
+.navbar-toggler-icon {
+    background-image: url(../images/icons/more.png) !important; 
 }
 
 .nav-item {
     border-right: 1px solid rgba(255, 255, 255, 0.425);
 }
 
+.nav-item a {
+    color: white;
+}
+
+.nav-link>img {
+    height: 1.5rem;
+    margin-right: 0.5em;
+
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:hover {
+    background-color: #212529;
+}
+
 .nav-item:last-child {
     border-right: transparent;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #FF9017;
-}
-
-.navbar-light .navbar-brand {
-    color: white;
-    font-weight: 700;
-    text-shadow: 2px 2px 0px darkslategrey;
-}
-
-.navbar-light .navbar-brand:hover {
-    color: #FF9017;
 }
 
 #navbarSupportedContent .btn:hover {
@@ -101,45 +127,81 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid #FF9017;
 }
 
-.btn-outline-primary {
-    color: #0F7B57;
-    border-color: rgb(15, 123, 87);
-}
-
-.btn-outline-primary:hover {
-    color: white;
-    border-color: #FF9017;
-    background-color: #FF9017
-}
-
-.btn-primary {
-    color: white;
-    border-color: #FF9017;
-    background-color: #FF9017
-}
-
-.btn-primary:hover {
-    color: white;
-    border-color: #FF9017;
-    background-color: #EB8515
-}
-
-.navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.308);
-}
-
-.navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
-    background-color: #139B6D;
-    color: white;
+.transparent-navbar {
+    /* clas sis applied when navbar is scrolled */
+    opacity: 0.9;
 }
 
 /* BREAD CRUMB */
 
-.breadcrumb-item a{
+.breadcrumb-item a {
     color: #0F7B57;
 }
 
-/* SLIDESHOW */
+
+
+/* HEADER */
+.headerH {
+    /* absolute entfernt das Element aus dem Flow des Dokuments, alle anderen Elemente werden angezeigt als würde das Element gar nciht existieren. Es schwebt also wie ein Geist vor dem Header Image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.headerH>img {
+    height: 2rem;
+}
+
+.headerImage {
+    /* relative nimmt das Element aus dem normalen Flow der Documents heraus und sorgt afür, dass wir es seperat modifizieren können ohne andere Elemente zu beeinflussen */
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    /*container-width*/
+    overflow: hidden;
+    /*hide bounds of image */
+    margin: 0;
+    /*reset margin of figure tag*/
+}
+
+.hidden {
+    display: none;
+}
+
+.header-icon {
+    width: 1em;
+    height: 1em;
+    font-size: inherit;
+}
+
+.bigimage {
+    display: block;
+    /*remove inline-block spaces*/
+    width: 100%;
+    /*make image stretch*/
+    margin: -10% 0;
+    opacity: 0.6;
+}
+
+.bigImageUnderlay {
+    background-color: rgb(3, 37, 26);
+
+}
+
+
+
+
+
+/* INDEX.html */
+
+/* Slidehow */
+
+.polygon {
+    clip-path: polygon(0% 98%, 6% 94%, 17% 97%, 29% 93%, 33% 96%, 43% 94%, 52% 97%, 62% 94%, 71% 98%, 77% 93%, 84% 97%, 90% 94%, 97% 96%, 100% 93%, 100% 100%, 100% 0%, 0% 0%);
+}
+
 
 .carouselImg {
     opacity: 0.5;
@@ -160,9 +222,40 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
-/* Card mit ganzem Bild */
+/*Current Information */
 
+.current-information {
+    color: white;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2rem;
+}
+
+.current-information>div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.current-information img {
+    height: 1.5em;
+}
+
+.opening-hours {
+    background-color: #139B6D;
+}
+
+.next-feeding {
+    background-color: #10865F;
+}
+
+.visit-us {
+    background-color: #0F7B57;
+}
+
+/* Quick Access Boxes */
 .card-img-overlay {
+    /* Card mit ganzem Bild */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,13 +266,8 @@ a .card-img-overlay {
     color: white;
 }
 
-.card {
-    border: none;
-}
-
-/* Hover Overlay Effekt */
-
 .overlay2 {
+    /* Hover Overlay Effekt */
     position: absolute;
     top: 0;
     bottom: 0;
@@ -190,7 +278,6 @@ a .card-img-overlay {
     opacity: 0;
     transition: 0.6s ease-in;
     background-color: #0F7B57;
-    background-image: url("./images/pattern.jpg");
 }
 
 .overlayContainer2 {
@@ -213,111 +300,26 @@ a .card-img-overlay {
     text-align: center;
 }
 
-/* HEADER */
-
-.headerH {
-    /* absolute entfernt das Element aus dem Flow des Dokuments, alle anderen Elemente werden angezeigt als würde das Element gar nciht existieren. Es schwebt also wie ein Geist vor dem Header Image */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.headerImage {
-    /* relative nimmt das Element aus dem normalen Flow der Documents heraus und sorgt afür, dass wir es seperat modifizieren können ohne andere Elemente zu beeinflussen */
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 100%;
-    /*container-width*/
-    overflow: hidden;
-    /*hide bounds of image */
-    margin: 0;
-    /*reset margin of figure tag*/
-}
-
-.hidden {
-    display: none;
-}
-
-.bigimage {
-    display: block;
-    /*remove inline-block spaces*/
-    width: 100%;
-    /*make image streatch*/
-    margin: -10% 0;
-}
-
-.progress .progress-bar {
-    animation-name: animateBar;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: .4s;
-}
-
-@keyframes animateBar {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-/* Makes Display-4 Texts smaller on index when screen < 1000*/
-
-@media only screen and (max-width: 1000px) {
-    .card-img-overlay .display-4, .d-flex .display-4 {
-        font-size: 2rem;
-    }
-}
-
-/* COLORS  */
-
-.bgDarkG {
-    background-color: #0F7B57;
-}
-
-.bgMidG {
-    background-color: #10865F;
-}
-
-.bgBrightG {
-    background-color: #139B6D;
-}
-
-.bgDarkGrey {
-    background-color: #cecccc;
-}
-
-.bgMidGrey {
-    background-color: #F1F1F1;
-}
-
-.bgBrightO {
-    background-color: #FF9017;
-}
-
-.bgDarkO {
+/*Call to action*/
+.call-to-action {
+    background: linear-gradient(135deg, #FF9017 0%, #FF9017 5%, transparent 5%, transparent 10%, #FF9017 10%, #FF9017 15%, transparent 15%, transparent 20%, #FF9017 20%, #FF9017 25%, transparent 25%, transparent 30%, #FF9017 30%, #FF9017 35%, transparent 35%, transparent 40%, #FF9017 40%, #FF9017 45%, transparent 45%, transparent 50%, #FF9017 50%, #FF9017 55%, transparent 55%, transparent 60%, #FF9017 60%, #FF9017 65%, transparent 65%, transparent 70%, #FF9017 70%, #FF9017 75%, transparent 70%, transparent 80%, #FF9017 80%, #FF9017 85%, transparent 85%, transparent 90%, #FF9017 90%, #FF9017 95%, transparent 95%);
+    background-size: 6em 6em;
     background-color: #EB8515;
-}
 
-/* SMALL BOX */
-
-.smallBox {
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
-    border-radius: 8px;
-    margin: 1em 0 1em 0;
-    padding: 1em;
-    background: #f1f1f1;
-    text-align: center;
-}
-
-.simpleBox {
-    background: #f1f1f1;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     padding: 1rem;
+    border-radius: 3px;
+    margin-top: 3rem;
     margin-bottom: 1rem;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.call-to-action p {
+    color: white;
+    font-size: 2rem;
 }
 
 /* ANIMALS.html */
@@ -336,12 +338,21 @@ a .card-img-overlay {
     margin: 0;
 }
 
-#warning {
-    font-weight: bold;
-    background-color: indianred;
-    width: 50%;
-    margin: auto;
-    border-radius: 50px;
+.progress .progress-bar {
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .4s;
+}
+
+@keyframes animateBar {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .geneticStat {
@@ -349,15 +360,22 @@ a .card-img-overlay {
 }
 
 .statusGreen {
-    background-color: #139B6D;
+    background-color: #28a745;
 }
 
 .statusOrange {
-    background-color: #FF9017;
+    background-color: #ffc107;
 }
 
 .statusRed {
-    background-color: red;
+    background-color: #dc3545;
+}
+
+.animal-card-body {
+    background: radial-gradient(circle at top left, transparent 25%, #0F7B57 25.5%, #0F7B57 36%, transparent 37%, transparent 100%), radial-gradient(circle at bottom right, transparent 34%, #0F7B57 34.5%, #0F7B57 45.5%, transparent 46%, transparent 100%);
+    background-size: 5em 5em;
+    background-color: #10865F !important;
+    opacity: 1;
 }
 
 /* Image */
@@ -404,78 +422,99 @@ a .card-img-overlay {
     display: none;
 }
 
-#thanksAlert {
-    display: none;
-}
-
-.adoptionButton:disabled {
-    color: #AEAEAE;
-    border-color: #AEAEAE;
-}
-
-.adoptionButton:disabled:hover {
-    color: #AEAEAE;
-    border-color: #AEAEAE;
-    background-color: transparent;
-}
-
-/* MAP */
-
-
-* {
-    box-sizing: border-box;
-}
-
-.img-zoom-container {
-    position: relative;
-}
-
-.img-zoom-lens {
+.conservation-pill {
     position: absolute;
-    border: 1px solid #139B6D;
-    /*set the size of the lens:*/
-    width: 40px;
-    height: 40px;
-}
-
-.img-zoom-result {
-    border: 1px solid white;
-    /*set the size of the result div:*/
-    width: 300px;
-    height: 300px;
-    position:absolute;
+    top: 5%;
+    right: 5%;
 }
 
 
-/*DONATIONS*/
-.donation-list .active{
-    background-color: #0F7B57;
+/* BUTTONS */
+.btn-primary {
+    color: white;
+    background-color: #FF9017;
+    border: 2px solid #aa5f0f;
+    /* Transition for all animaltions */
+    transition: 0.25s;
+    /* Shadow */
+    -webkit-box-shadow: 0px 7px 0px 0px #aa5f0f;
+    box-shadow: 0px 7px 0px 0px #aa5f0f;
 }
+
+.btn-primary:hover {
+    /* Background Image */
+    background: linear-gradient(45deg, #FF9017 20%, transparent 20%), linear-gradient(135deg, transparent 80%, #FF9017 80%), radial-gradient(#FF9017 20%, transparent 21%);
+    background-size: 2em 2em;
+    background-color: #EB8515;
+    opacity: 1;
+
+    /* Border */
+    border: 2px solid #aa5f0f;
+}
+
+.btn-primary:disabled {
+    background: #888888;
+
+    color: #e6e9e9;
+    opacity: 1;
+
+    /* Border */
+    border: 2px solid #888888;
+
+    /* Shadow */
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.btn-primary:focus {
+    /* Background Image */
+    background: linear-gradient(45deg, #FF9017 20%, transparent 20%), linear-gradient(135deg, transparent 80%, #FF9017 80%), radial-gradient(#FF9017 20%, transparent 21%);
+    background-size: 2em 2em;
+    background-color: #EB8515;
+    opacity: 1;
+
+    /* Border */
+    border: 2px solid #aa5f0f;
+
+    /* Shadow */
+    -webkit-box-shadow: 0px 7px 0px 0px #aa5f0f;
+    box-shadow: 0px 7px 0px 0px #aa5f0f;
+
+}
+
+.btn-primary:active {
+    background-color: #EB8515 !important;
+
+    /* Shadow */
+    box-shadow: none;
+    -webkit-box-shadow: none;
+
+    /* Move */
+    transform: translate(0, 5px);
+}
+
 
 /* FOOTER */
 
 .footer {
-    background-color: #0F7B57;
+    background-color: #343a40;
     padding: 2rem;
     text-align: center;
 }
-footer:first-of-type {
-    margin-top: 1rem;
-}
 
-.social-icon {
+.footer-social a {
     color: white;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     text-decoration: none;
 }
 
-.footer-link-box {
+.footer-links {
     margin-bottom: 1.5rem;
     margin-top: 1rem;
 }
 
-.footer-link {
+.footer-links a {
     color: white;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -485,4 +524,15 @@ footer:first-of-type {
 .footerImg {
     width: 50px;
     height: 50px;
+}
+
+footer a:hover {
+    color: #EB8515;
+}
+
+.footer-sigils {
+    display: flex;
+    justify-content: center;
+    background-color: #0F7B57;
+    padding: 1rem
 }

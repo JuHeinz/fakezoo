@@ -16,29 +16,28 @@ function combine() {
         else {
             sexSymbol = "♀️";
         }
-        cardArray[i].querySelectorAll("span")[0].innerText = sexSymbol;
+        cardArray[i].querySelector(".sexSpan").innerText = sexSymbol;
         animalList[i].sex = text[1];
     }
     )
 
 
     //SPECIES
-    cardArray[i].querySelectorAll("span")[1].innerText = animalList[i].species;
+    cardArray[i].querySelector(".speciesSpan").innerText = " " + animalList[i].species;
 
     //PILLS
     //remove hidden class from Pill if Animal is endangered.
     if (endangeredAnimals.includes(animalList[i].species)) {
-        cardArray[i].querySelector(".divPills").classList.remove("hidden");
-        cardArray[i].querySelector(".badge").classList.remove("hidden");
+        cardArray[i].querySelector(".conservation-pill").classList.remove("hidden");
 
 
     }
     //STATS
     //Stat Names
-    cardArray[i].firstElementChild.childNodes[2].childNodes[0].innerText = "Fertility"
-    cardArray[i].firstElementChild.childNodes[3].childNodes[0].innerText = "Size"
-    cardArray[i].firstElementChild.childNodes[4].childNodes[0].innerText = "Longevity"
-    cardArray[i].firstElementChild.childNodes[5].childNodes[0].innerText = "Immunity"
+    cardArray[i].firstElementChild.childNodes[2].childNodes[0].innerText = "Popularity"
+    cardArray[i].firstElementChild.childNodes[3].childNodes[0].innerText = "Visibility"
+    cardArray[i].firstElementChild.childNodes[4].childNodes[0].innerText = "Lorem"
+    cardArray[i].firstElementChild.childNodes[5].childNodes[0].innerText = "Ipsum"
 
     for (let j = 2; j < 6; j++) {
         //Set width
@@ -58,20 +57,7 @@ function combine() {
             cardArray[i].firstElementChild.childNodes[j].querySelector(".progress-bar").classList.add("bg-success");
         }
     }
-    //BIO
-    //fetchBio returns a promise. 
-    //as soon as that promise is resolved (with the value "text"), it is inputed.
-    // fetchBio().then((text) => {
-    //     cardArray[i].getElementsByClassName("card-text")[1].innerText = text;
-    //     animalList[i].bio = text;
-    // })
-
-
-
-
-
-
-
+ 
 
     //APEND CARD
     cardDeck.append(cardArray[i]);

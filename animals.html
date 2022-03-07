@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fake Zoo | The best zoo that doesn't exist!</title>
+  <title>Our Animals | Fake Zoo </title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Hier stände was fürs SEO.">
+  <meta name="description" content="See all animals at the fake zoo. Full fake zoo animal list.">
 
   <!-- Script for navbar opacity change -->
   <script src="./scripts/general.js"></script>
@@ -18,12 +18,12 @@
   <!-- Mein CSS -->
   <link rel="stylesheet" type="text/css" href="styles/custom.css">
 
+  <!--Favicon-->
+  <link rel="icon" type="image/png" href="./images/icons/favicon.ico">
+
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!--Favicon-->
-  <link rel="icon" type="image/png" href="./images/hnet.com-image.ico">
 
   <!--Axios-->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -31,18 +31,15 @@
 </head>
 
 <body>
-  <!-- NAV 1 -->
-  <nav class="navbar navbar-light bgDarkG justify-content-center">
-    <a class="navbar-brand" href="#">
-      <a class="navbar-brand" href="./index.html"> Fake <img src="./images/skunk.svg" width="50" height="50" alt=""
-          loading="lazy" alt=""> Zoo</a>
+  <!-- BRANDBAR  -->
+  <div class="brandBar navbar justify-content-center">
+    <a class="" href="./index.html"> Fake <img src="./images/icons/skunk.svg" width="50" height="50" alt="Fake Zoo Logo"
+        loading="lazy" />
+      Zoo</a>
+  </div>
 
-    </a>
-  </nav>
-
-  <!-- NAV 2 -->
+  <!-- NAVIGATION -->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top justify-content-center" id="nav2">
-
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,27 +52,17 @@
 
         <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Home </a>
+          <a class="nav-link" href="./index.html"><img src="./images/icons/home.svg"> Home </a>
         </li>
 
         <!-- Animals -->
         <li class="nav-item">
-          <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals </a>
-        </li>
-
-        <!-- Map -->
-        <li class="nav-item">
-          <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map </a>
-        </li>
-
-        <!-- Donate -->
-        <li class="nav-item">
-          <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us </a>
+          <a class="nav-link" href="./animals.html"><img src="./images/icons/paw.svg"> Our Animals </a>
         </li>
 
         <!-- Ticket -->
         <li class="nav-item">
-          <a class="nav-link" href="./tickets.html"><i class="fas fa-ticket-alt"></i> </i> Your visit </a>
+          <a class="nav-link" href="./tickets.html"> <img src="./images/icons/ticket.svg"> Tickets </a>
       </ul>
 
     </div>
@@ -84,9 +71,9 @@
   <!--HEADER-->
   <header>
     <!--Image-->
-    <div class="headerImage">
-      <img src="./images/redpanda.jpg" class="img-fluid bigimage">
-      <h1 class="display-4 headerH w-100"><i class="fas fa-frog"></i> Our Animals</h1>
+    <div class="headerImage bigImageUnderlay">
+      <img src="./images/header/zebra.jpg" class="img-fluid bigimage">
+      <h1 class="display-4 headerH w-100"> <img src="./images/icons/paw.svg"> Our Animals</h1>
     </div>
 
 
@@ -102,98 +89,84 @@
   <main>
     <div class="container ">
 
-      <!--Intro-->
-      <section>
-        <div class="jumbotron boxshadow">
-
-          <p class="lead">These animals are randomly generated.</p>
-          <p> Pure .js simulation of retrieval from database. Includes randomuser.me API for name and gender selection.
-          </p>
-
-          <div class="d-flex justify-content-center align-items-center m-1 p-1">
-
-          </div>
-        </div>
-      </section>
-
       <!--Cards-->
       <section>
-        <div class="card-deck" id="holder">
+        <div class="row row-cols-sm-1 row-cols-md-3" id="holder">
         </div>
       </section>
 
       <!--Button-->
       <section>
         <div class="d-flex justify-content-center align-items-center mb-3 mt-1 p-1">
-          <button type="button" class="btn btn-outline-primary newAnimalsButton">
-            Show more
+          <button type="button" class="btn btn-block btn-primary newAnimalsButton">
+            Generate more
           </button>
         </div>
       </section>
 
+      <section class="jumbotron boxshadow">
+          <h2 class="display-4">How this works:</h2>
+          <p> These animals are randomly created from a selection of 98 species. Axios and the randomuser.me API are used to fetch a name and gender. The other attributes are generated by picking a random index fron an array or by generating a random number. The attributes are stored as an instance of an animal class. These instances get pushed into an array. The above steps happen in animals.js </p>
+          <p>In cardBuilder.js, a card is created for each animal. Since this project doesn't use any JavaScript frameworks, Elements are created by using document.createElement(). To facilitate styling and selection, the Elements recieve class names. The finished card is put into an array </p>
+          <p>Finally, combiner.js combines the animal information and DOM Elements by looping through the card array and animal information array.</p>
+      </section>
     </div>
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer justify-content-center">
-    <!-- Logos -->
-    <div class="col-12 ">
+  <div class="footer-sigils">
+    <div class="">
+      <img class="footerImg" src="./images/icons/pet.svg" alt="logo1">
+      <img class="footerImg" src="./images/icons/guarantee.svg" alt="logo2">
+      <img class="footerImg" src="./images/icons/safe.svg" alt="logo3">
+    </div>
+  </div>
+  </div>
 
-      <img class="footerImg" src="./images/pet.svg" alt="logo1">
-      <img class="footerImg" src="./images/guarantee.svg" alt="logo1">
+  <footer class="footer">
+    <!-- Social -->
+    <div class="footer-social">
 
-      <img class="footerImg" src="./images/safe.svg" alt="logo1">
+
+      <a href="https://www.facebook.com/">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com/">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/">
+        <i class="fa fa-instagram"></i>
+
+        <a href="https://www.youtube.com/">
+          <i class="fa fa-youtube-play"></i>
+        </a>
+        <a href="https://www.linkedin.com/">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://www.snapchat.com/">
+          <i class="fa fa-snapchat-ghost"></i></a>
+
+
 
     </div>
-  </footer>
-
-  <footer class="footer justify-content-center bg-dark">
-    <!-- Social -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
 
 
-          <a href="https://www.facebook.com/" class="social-icon">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="https://www.twitter.com/" class="social-icon">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/" class="social-icon">
-            <i class="fa fa-instagram"></i>
-
-            <a href="https://www.youtube.com/" class="social-icon">
-              <i class="fa fa-youtube-play"></i>
-            </a>
-            <a href="https://www.linkedin.com/" class="social-icon">
-              <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="https://www.snapchat.com/" class="social-icon">
-              <i class="fa fa-snapchat-ghost"></i></a>
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="https://wikipedia.org">Careers</a>
+      <a href="https://wikipedia.org">Contact Us</a>
+      <a href="https://wikipedia.org">Media Room</a>
+      <a href="https://wikipedia.org">Terms &amp; Conditions</a>
+      <a href="https://wikipedia.org">Privacy Policy</a>
+      <a href="https://wikipedia.org">Regulations</a>
+    </div>
 
 
 
-        </div>
+    <div class="col-12 text-white mt-2">
+      © FakeZoo Inc.
+    </div>
 
-
-        <!-- Footer Links -->
-        <div class="col-12 footer-link-box">
-          <a href="https://wikipedia.org" class="footer-link">Careers</a>
-          <a href="https://wikipedia.org" class="footer-link">Contact Us</a>
-          <a href="https://wikipedia.org" class="footer-link">Media Room</a>
-          <a href="https://wikipedia.org" class="footer-link">Terms &amp; Conditions</a>
-          <a href="https://wikipedia.org" class="footer-link">Privacy Policy</a>
-          <a href="https://wikipedia.org" class="footer-link">Regulations</a>
-        </div>
-
-
-
-        <div class="col-12 text-white mt-2">
-          © FakeZoo Inc.
-        </div>
-
-      </div>
   </footer>
 
   <!-- SCRIPTS -->
@@ -201,10 +174,6 @@
   <script src="scripts/animals.js"></script>
   <script src="scripts/combiner.js"></script>
   <script src="scripts/adoption.js"></script>
-  <script src="scripts/testScripts.js"></script>
-
-
-
 
 
   <!-- Letztes Element im Body: JS und co., damit Bootstrap funktioniert -->

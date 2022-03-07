@@ -6,10 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fake Zoo | The best zoo that doesn't exist!</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Hier stände was fürs SEO.">
-
-  <!-- Script for navbar opacity change -->
-  <script src="./scripts/general.js"></script>
+  <meta name="description" content="Fake Zoo, a zoo that doesn't exist. Entirely fictonal zoo.">
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,23 +20,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--Favicon-->
-  <link rel="icon" type="image/png" href="./images/hnet.com-image.ico">
+  <link rel="icon" type="image/png" href="./images/icons/favicon.ico">
 
 </head>
 
 <body>
-  <!-- NAV 1 -->
-  <nav class="navbar navbar-light bgDarkG justify-content-center">
-    <a class="navbar-brand" href="#">
-      <a class="navbar-brand" href="./index.html"> Fake <img src="./images/skunk.svg" width="50" height="50" alt=""
-          loading="lazy" alt=""> Zoo</a>
+  <!-- BRANDBAR  -->
+  <div class="brandBar navbar justify-content-center">
+    <a class="" href="./index.html"> Fake <img src="./images/icons/skunk.svg" width="50" height="50" alt="Fake Zoo Logo"
+        loading="lazy" />
+      Zoo</a>
+  </div>
 
-    </a>
-  </nav>
-
-  <!-- NAV 2 -->
+  <!-- NAVIGATION -->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top justify-content-center" id="nav2">
-
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,27 +46,17 @@
 
         <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Home </a>
+          <a class="nav-link" href="./index.html"><img src="./images/icons/home.svg"> Home </a>
         </li>
 
         <!-- Animals -->
         <li class="nav-item">
-          <a class="nav-link" href="./animals.html"><i class="fas fa-frog"></i> Our Animals </a>
-        </li>
-
-        <!-- Map -->
-        <li class="nav-item">
-          <a class="nav-link" href="./map.html"><i class="fas fa-map"></i> Park Map </a>
-        </li>
-
-        <!-- Donate -->
-        <li class="nav-item">
-          <a class="nav-link" href="./donate.html"><i class="fas fa-heart"> </i> Donate to us </a>
+          <a class="nav-link" href="./animals.html"><img src="./images/icons/paw.svg"> Our Animals </a>
         </li>
 
         <!-- Ticket -->
         <li class="nav-item">
-          <a class="nav-link" href="./tickets.html"><i class="fas fa-ticket-alt"></i> </i> Your visit </a>
+          <a class="nav-link" href="./tickets.html"> <img src="./images/icons/ticket.svg"> Tickets </a>
       </ul>
 
     </div>
@@ -88,7 +72,7 @@
         <!-- Carousel Slide -->
         <div class="carousel-item active">
           <div class="carouselUnderlay">
-            <img src="./images/meet2.jpg" class="d-block w-100 carouselImg" alt="...">
+            <img src="./images/index/meet2.jpg" class="d-block w-100 carouselImg" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5 class="display-4">Meet wildlife up close</h5>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -101,7 +85,7 @@
         <!-- Carousel Slide -->
         <div class="carousel-item ">
           <div class="carouselUnderlay">
-            <img src="./images/cute2.jpg" class="d-block w-100 carouselImg" alt="...">
+            <img src="./images/index/cute2.jpg" class="d-block w-100 carouselImg" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5 class="display-4">See baby animals</h5>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -112,7 +96,7 @@
         <!-- Carousel Slide -->
         <div class="carousel-item ">
           <div class="carouselUnderlay">
-            <img src="./images/meet.jpg" class="d-block w-100 carouselImg" alt="...">
+            <img src="./images/index/meet.jpg" class="d-block w-100 carouselImg" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5 class="display-4">Make new friends</h5>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -137,88 +121,82 @@
   <!--MAIN-->
   <main>
     <div class="container">
-      <!-- INTRO -->
-      <section>
-        <div class="boxshadow row text-white mx-0 mt-2 ">
-          <div class="d-flex flex-column bgBrightG p-3 col-md-4">
-            <p><b><i class="far fa-clock"></i> Opening Hours</b></p>
-            <p class="mb-0 mt-0">Today, <span class="mb-0 mt-0" id ="timeSpan"></span>:</p>
-            <h4 class="display-4 mt-auto">9 AM - 8 PM</h4>
-            <p>Last Admission: 7 PM</span></p>
-          </div>
 
-          <div class="d-flex flex-column bgMidG p-3 col-md-6">
-            <p><b><i class="fas fa-cookie-bite"></i> Next feeding</b></p>
-            <p class="mb-0 mt-0">Please wear a mask!</span></p>
-            <h4 class="display-4 mt-auto">Hippos, 1 PM</h4>
-            <p>Sed, mollitia dolorem. Rerum et suscipit atque nesciunt officia natus reprehenderit sed illo repellendus
-              facere quaerat.</p>
+      <!-- Current information -->
+      <section class="boxshadow row current-information">
+        <div class="col-md-4 opening-hours">
+          <p><img src="./images/icons/time.svg"> <b> Opening Hours</b></p>
+          <p class="mb-0 mt-0">Today, <span class="mb-0 mt-0" id="timeSpan"></span>:</p>
+          <h4 class="display-4 mt-auto"><span id="openingTime"></span>:00 - <span id="closingTime"></span>:00</h4>
+          <p>Last Admission: <span id="lastAdmission"></span>:00</p>
+        </div>
 
-          </div>
-
-          <div class="d-flex flex-column bgDarkG p-3 col-md-2">
-            <p><b><i class="fas fa-ticket-alt"></i> Visit us!</b></p>
-            <button class="btn btn-outline-light mt-auto mb-1" href="./tickets.html" role="button">Buy tickets!</a>
-          </div>
+        <div class="col-md-6 next-feeding">
+          <p><img src="./images/icons/cookie.svg"> <b> Next feeding</b></p>
+          <h4 class="display-4 mt-auto">Hippos, <span id="nextHour"></span>:00</h4>
+          <p>Please wear a mask!</p>
 
         </div>
+
+        <div class="col-md-2 visit-us">
+          <p><img src="./images/icons/temperature.svg"><b> Temperature</b></p>
+          <h4 class="display-4 mt-auto"><span id="temperature"></span>°C</h4>
+          <p>currently.</p>
+
+        </div>
+
       </section>
 
-
-
-      <!-- CONTENT  -->
-      <section>
-        <div class="card-deck mt-5">
-
-          <div class="card bg-dark text-white mt-1 boxshadow">
-            <a href="./animals.html">
-              <div class="overlayContainer2">
-                <img src="./images/red-panda-2.jpg" class="card-img img-fluid" alt="...">
-                <div class="card-img-overlay text-center">
-                  <h5 class="display-4">Our Animals</h5>
-                </div>
-                <div class="overlay2">
-                  <div class="overlay2Ttext">Meet over 200 animals.</div>
-                </div>
+      <!--Quick Access Boxes-->
+      <section class="card-deck mt-5">
+        <div class="card bg-dark text-white mt-1 boxshadow">
+          <a href="./animals.html">
+            <div class="overlayContainer2">
+              <img src="./images/index/red-panda-2.jpg" class="card-img img-fluid" alt="...">
+              <div class="card-img-overlay text-center">
+                <h5 class="display-4">Our Animals</h5>
               </div>
-            </a>
-          </div>
-
-          <div class="card bg-dark text-white mt-1 boxshadow">
-            <a href="./map.html">
-              <div class="overlayContainer2 position-relative">
-                <img src="./images/flamingos.jpg" class="card-img img-fluid" alt="...">
-                <div class="card-img-overlay text-center">
-                  <h5 class="display-4">Park Map</h5>
-                </div>
-                <div class="overlay2">
-                  <div class="overlay2Ttext">Get oriented.</div>
-                </div>
+              <div class="overlay2">
+                <div class="overlay2Ttext">Meet over 200 species.</div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
+        </div>
 
-
-          <div class="card bg-dark text-white mt-1 boxshadow">
-            <a href="./donate.html">
-              <div class="overlayContainer2 position-relative">
-                <img src="./images/cute.jpg" class="card-img img-fluid" alt="...">
-                <div class="card-img-overlay text-center">
-                  <h5 class="display-4">Donate to us</h5>
-                </div>
-                <div class="overlay2">
-                  <div class="overlay2Ttext">Help our animals survive.</div>
-                </div>
+        <div class="card bg-dark text-white mt-1 boxshadow">
+          <a href="#">
+            <div class="overlayContainer2 position-relative">
+              <img src="./images/index/flamingos.jpg" class="card-img img-fluid" alt="...">
+              <div class="card-img-overlay text-center">
+                <h5 class="display-4">Park Map</h5>
               </div>
-            </a>
-          </div>
+              <div class="overlay2">
+                <div class="overlay2Ttext">Get oriented.</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="card bg-dark text-white mt-1 boxshadow">
+          <a href="./tickets.html">
+            <div class="overlayContainer2 position-relative">
+              <img src="./images/index/cute.jpg" class="card-img img-fluid" alt="...">
+              <div class="card-img-overlay text-center">
+                <h5 class="display-4">Get Tickets</h5>
+              </div>
+              <div class="overlay2">
+                <div class="overlay2Ttext">Enjoy an unforgettable day</div>
+              </div>
+            </div>
+          </a>
         </div>
       </section>
+      <hr>
 
       <!--NEWS-->
       <section>
         <h2 class="mt-5 mb-3">News</h2>
-
         <div class="card-group boxshadow">
           <div class="card">
             <div class="card-header">
@@ -262,6 +240,7 @@
           </div>
         </div>
       </section>
+      <hr>
 
       <!-- TESTIMONIALS -->
       <section>
@@ -269,12 +248,12 @@
         <div class="card mb-3 boxshadow">
           <div class="row no-gutters align-items-center">
             <div class="col-md-4">
-              <img src="./images/testi1.jpg" class="card-img" alt="...">
+              <img src="./images/index/testi1.jpg" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
                 <blockquote class="blockquote text-center">
-                  <p class="mb-0">Can you believe this dude? You really only see stuff like that here.</p>
+                  <p class="mb-0">Et cillum id sit duis cupidatat reprehenderit adipisicing amet aute.</p>
                   <footer class="blockquote-footer">Maxime Musterfrau <cite title="Source Title">visited on
                       02/03/2020</cite></footer>
                 </blockquote>
@@ -286,13 +265,13 @@
         <div class="card mb-3">
           <div class="row no-gutters align-items-center boxshadow">
             <div class="col-md-4">
-              <img src="./images/testi2.jpg" class="card-img" alt="...">
+              <img src="./images/index/testi2.jpg" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
                 <blockquote class="blockquote text-center">
-                  <p class="mb-0">The first time I saw Willy the Alpaca I was overcome with many different emotions. In
-                    the end awe won out and since then I have visited him every month.</p>
+                  <p class="mb-0">Adipisicing laborum enim laboris elit do dolor ad consequat duis cupidatat occaecat.
+                  </p>
                   <footer class="blockquote-footer">Jane Doe <cite title="Source Title">visited on 07/06/2019</cite>
                   </footer>
                 </blockquote>
@@ -304,13 +283,13 @@
         <div class="card mb-3">
           <div class="row no-gutters align-items-center boxshadow">
             <div class="col-md-4">
-              <img src="./images/testi3.jpg" class="card-img img-fluid" alt="...">
+              <img src="./images/index/testi3.jpg" class="card-img img-fluid" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
                 <blockquote class="blockquote text-center">
-                  <p class="mb-0">My favourite past time is staring at plants in deep contemplation. Therefore, Fake Zoo
-                    is one of my favourite places to visit.</p>
+                  <p class="mb-0">Ea do labore eu mollit tempor qui consectetur anim dolore deserunt nulla in veniam
+                    fugiat..</p>
                   <footer class="blockquote-footer">Flora Ivy <cite title="Source Title">visited on 02/03/2020</cite>
                   </footer>
                 </blockquote>
@@ -319,74 +298,82 @@
           </div>
         </div>
       </section>
+      <hr>
+
+      <!--Call to Action-->
+      <section>
+        <div class="call-to-action boxshadow">
+          <p>Get your tickets now!</p>
+          <a class="btn btn-primary" href="./tickets.html" role="button">Get tickets</a>
+        </div>
+      </section>
 
     </div>
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer justify-content-center">
-    <!-- Logos -->
-    <div class="col-12 ">
+  <div class="footer-sigils">
+    <div class="">
+      <img class="footerImg" src="./images/icons/pet.svg" alt="logo1">
+      <img class="footerImg" src="./images/icons/guarantee.svg" alt="logo2">
+      <img class="footerImg" src="./images/icons/safe.svg" alt="logo3">
+    </div>
+  </div>
 
-      <img class="footerImg" src="./images/pet.svg" alt="logo1">
-      <img class="footerImg" src="./images/guarantee.svg" alt="logo1">
 
-      <img class="footerImg" src="./images/safe.svg" alt="logo1">
+  <footer class="footer">
+    <!-- Social -->
+    <div class="footer-social">
+
+
+      <a href="https://www.facebook.com/">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="https://www.twitter.com/">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/">
+        <i class="fa fa-instagram"></i>
+
+        <a href="https://www.youtube.com/">
+          <i class="fa fa-youtube-play"></i>
+        </a>
+        <a href="https://www.linkedin.com/">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://www.snapchat.com/">
+          <i class="fa fa-snapchat-ghost"></i></a>
+
+
 
     </div>
-  </footer>
-
-  <footer class="footer justify-content-center bg-dark">
-    <!-- Social -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
 
 
-          <a href="https://www.facebook.com/" class="social-icon">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="https://www.twitter.com/" class="social-icon">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/" class="social-icon">
-            <i class="fa fa-instagram"></i>
-
-            <a href="https://www.youtube.com/" class="social-icon">
-              <i class="fa fa-youtube-play"></i>
-            </a>
-            <a href="https://www.linkedin.com/" class="social-icon">
-              <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="https://www.snapchat.com/" class="social-icon">
-              <i class="fa fa-snapchat-ghost"></i></a>
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="https://wikipedia.org">Careers</a>
+      <a href="https://wikipedia.org">Contact Us</a>
+      <a href="https://wikipedia.org">Media Room</a>
+      <a href="https://wikipedia.org">Terms &amp; Conditions</a>
+      <a href="https://wikipedia.org">Privacy Policy</a>
+      <a href="https://wikipedia.org">Regulations</a>
+    </div>
 
 
 
-        </div>
+    <div class="col-12 text-white mt-2">
+      © FakeZoo Inc.
+    </div>
 
-
-        <!-- Footer Links -->
-        <div class="col-12 footer-link-box">
-          <a href="https://wikipedia.org" class="footer-link">Careers</a>
-          <a href="https://wikipedia.org" class="footer-link">Contact Us</a>
-          <a href="https://wikipedia.org" class="footer-link">Media Room</a>
-          <a href="https://wikipedia.org" class="footer-link">Terms &amp; Conditions</a>
-          <a href="https://wikipedia.org" class="footer-link">Privacy Policy</a>
-          <a href="https://wikipedia.org" class="footer-link">Regulations</a>
-        </div>
-
-
-
-        <div class="col-12 text-white mt-2">
-          © FakeZoo Inc.
-        </div>
-
-      </div>
   </footer>
 
 
-  <!-- Bootstrap CDN -->
+
+
+  <!-- SCRIPTS -->
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/general.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
